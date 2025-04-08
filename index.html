@@ -1,9 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
+  <!-- Boot Screen -->
+  <div id="boot-screen">
+    <div id="header-container">
+        <div id="computer-icon">
+          <img src="imgs/retro_pc.png" alt="Computer Icon">
+        </div>
+        <div class="welcome-text">
+          Welcome to my portfolio website<br>
+          For a better experience use the desktop version
+        </div>
+      </div>
+    
+    <div class="info-section">
+      <div class="info-row">
+        <div class="info-label">File</div>
+        <div class="info-value">:Portfolio website</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Built with</div>
+        <div class="info-value">:HTML, CSS, Javascript</div>
+      </div>
+    </div>
+    
+    <div class="info-section">
+      <div class="info-row">
+        <div class="info-label">Specialist</div>
+        <div class="info-value">:UX/UI Designer, Front-End Developer</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Education</div>
+        <div class="info-value">:Fontys University of Applied Sciences</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">Tools</div>
+        <div class="info-value">:Figma, Illustrator, VS Code</div>
+      </div>
+    </div>
+    
+    <div class="enter-prompt">
+      <span class="enter-text">Press Enter to load the website</span>
+      <span id="cursor"></span>
+    </div>
+  </div>
+  
+  <!-- Login Screen -->
+  <div id="login-screen">
+    <div id="login-box">
+      <h2>LOGIN</h2>
+      <div id="password-field">
+        <div>Password: </div>
+        <div id="password-display"></div>
+        <span id="cursor"></span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <div id="main-content">
+    <h1>Welcome to my Portfolio</h1>
+  </div>
 
-<h1>Portfolio</h1>
-<p>About me</p>
-
+  <script src="script.js"></script>
 </body>
 </html>
