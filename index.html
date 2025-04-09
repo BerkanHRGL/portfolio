@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pixel-operator" type="text/css"/>
 </head>
 <body>
   <!-- Boot Screen -->
@@ -52,13 +53,19 @@
   </div>
   
   <!-- Login Screen -->
-  <div id="login-screen">
+<!-- Login Screen -->
+<div id="login-screen">
+    <div id="profile-picture">
+      <!-- You'll add your own cat image here -->
+      <img src="imgs/retro_cat.png" alt="Cat Profile">
+    </div>
     <div id="login-box">
-      <h2>LOGIN</h2>
-      <div id="password-field">
-        <div>Password: </div>
-        <div id="password-display"></div>
-        <span id="cursor"></span>
+      <div class="password-label">Enter password</div>
+      <div id="password-container">
+        <div id="password-field">
+          <div id="password-display"></div>
+        </div>
+        <button id="confirm-button">Confirm</button>
       </div>
     </div>
   </div>

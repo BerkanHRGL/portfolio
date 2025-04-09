@@ -4,6 +4,15 @@
     font-display: swap;
   }
   
+  /* Add Pixel Operator font directly with @font-face */
+  @font-face {
+    font-family: 'PixelOperator';
+    src: url('fonts/PixelOperator8-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  
   body, html {
     margin: 0;
     padding: 0;
@@ -23,10 +32,9 @@
   }
   
   #header-container {
-    display: flex;
+    display: none; /* Changed from opacity: 0 */
     align-items: center;
     margin-bottom: 40px;
-    opacity: 0;
   }
   
   #computer-icon {
@@ -44,7 +52,7 @@
   .info-section {
     margin-top: 20px;
     font-size: 18px;
-    opacity: 0;
+    display: none; /* Changed from opacity: 0 */
   }
   
   .info-row {
@@ -64,13 +72,17 @@
     position: absolute;
     bottom: 40px;
     font-size: 18px;
-    display: flex;
+    display: none; /* Changed from opacity: 0 */
     align-items: center;
-    opacity: 0;
   }
   
   .enter-text {
     margin-right: 8px;
+  }
+  
+  .highlight {
+    color: white;
+    font-weight: bold;
   }
   
   #cursor {
@@ -87,5 +99,131 @@
   }
   
   .visible {
-    opacity: 1 !important;
+    display: flex !important; /* For flex containers */
+  }
+  
+  .info-section.visible {
+    display: block !important; /* For block elements */
+  }
+  
+  .enter-prompt.visible {
+    display: flex !important; /* For the enter prompt specifically */
+  }
+  
+  #login-screen {
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+    /* You'll add your own space background here */
+    background-image: url('imgs/space-background.png');
+    background-size: cover;
+  }
+  
+  #profile-picture {
+    margin-bottom: 15px;
+  }
+  
+  #profile-picture img {
+    width: 150px;
+    height: 150px;
+    image-rendering: pixelated; /* Makes the image look more pixelated */
+    border: 3px solid #eee;
+    background-color: #eee;
+    padding: 10px;
+  }
+  
+  #login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .password-label {
+    color: #eee;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  #password-container {
+    display: flex;
+    background-color: #eee;
+  }
+  
+  #password-field {
+    background-color: #fff;
+    padding: 10px;
+    width: 200px;
+    text-align: left;
+    
+    /* 3D inset effect - opposite of the button */
+    border: none;
+    border-left: 3px solid #888888;
+    border-right: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    box-shadow: inset 2px 2px 0px #aaaaaa;
+    
+    /* Add right border as separator */
+    border-right: 2px solid #888888;
+  }
+  
+  #password-display {
+    color: #000;
+    min-width: 200px;
+    height: 25px;
+    position: relative;
+    font-family: monospace;
+    font-size: 16px;
+  }
+  
+  #confirm-button {
+    background-color: #cacaca;
+    color: #000;
+    padding: 10px 20px;
+    font-family: 'PixelOperator', 'VT323', monospace; 
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* 3D effect styles */
+    border: none;
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #888888;
+    border-bottom: 3px solid #888888;
+    box-shadow: 2px 2px 0px #000000;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all 0.1s;
+    
+    /* Add left border as part of the separation */
+    border-left: 2px solid #ffffff;
+  }
+  
+  /* Button hover state */
+  #confirm-button:hover {
+    background-color: #d5d5d5;
+  }
+  
+  /* Button active/pressed state */
+  #confirm-button:active {
+    background-color: #aaaaaa;
+    border-right: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    box-shadow: 0px 0px 0px #000000;
+    top: 2px;
+    left: 2px;
+  }
+  
+  #main-content {
+    display: none;
+    height: 100%;
+    text-align: center;
+    padding-top: 50px;
   }
