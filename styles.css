@@ -1,17 +1,16 @@
+/* Font imports */
 @font-face {
     font-family: 'VT323';
     src: url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
     font-display: swap;
   }
   
-  /* Add Pixel Operator font directly with @font-face */
   @font-face {
     font-family: 'PixelOperator';
-    src: url('fonts/PixelOperator8-Bold.ttf') format('truetype');
+    src: url('fonts/PixelOperator8.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
-
   
   body, html {
     margin: 0;
@@ -32,7 +31,7 @@
   }
   
   #header-container {
-    display: none; /* Changed from opacity: 0 */
+    display: none;
     align-items: center;
     margin-bottom: 40px;
   }
@@ -52,7 +51,7 @@
   .info-section {
     margin-top: 20px;
     font-size: 18px;
-    display: none; /* Changed from opacity: 0 */
+    display: none;
   }
   
   .info-row {
@@ -72,7 +71,7 @@
     position: absolute;
     bottom: 40px;
     font-size: 18px;
-    display: none; /* Changed from opacity: 0 */
+    display: none;
     align-items: center;
   }
   
@@ -85,6 +84,7 @@
     font-weight: bold;
   }
   
+  /* Blinking cursor */
   #cursor {
     display: inline-block;
     width: 10px;
@@ -99,17 +99,18 @@
   }
   
   .visible {
-    display: flex !important; /* For flex containers */
+    display: flex !important;
   }
   
   .info-section.visible {
-    display: block !important; /* For block elements */
+    display: block !important;
   }
   
   .enter-prompt.visible {
-    display: flex !important; /* For the enter prompt specifically */
+    display: flex !important;
   }
   
+  /* Login screen */
   #login-screen {
     display: none;
     height: 100%;
@@ -118,7 +119,6 @@
     align-items: center;
     text-align: center;
     background-color: #000;
-    /* You'll add your own space background here */
     background-image: url('imgs/space-background.png');
     background-size: cover;
   }
@@ -130,7 +130,7 @@
   #profile-picture img {
     width: 150px;
     height: 150px;
-    image-rendering: pixelated; /* Makes the image look more pixelated */
+    image-rendering: pixelated;
     border: 3px solid #eee;
     background-color: #eee;
     padding: 10px;
@@ -159,15 +159,11 @@
     padding: 10px;
     width: 200px;
     text-align: left;
-    
-    /* 3D inset effect - opposite of the button */
     border: none;
     border-left: 3px solid #888888;
     border-right: 3px solid #ffffff;
     border-bottom: 3px solid #ffffff;
     box-shadow: inset 2px 2px 0px #aaaaaa;
-    
-    /* Add right border as separator */
     border-right: 2px solid #888888;
   }
   
@@ -183,14 +179,12 @@
   #confirm-button {
     background-color: #cacaca;
     color: #000;
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-family: 'PixelOperator', 'VT323', monospace; 
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    
-    /* 3D effect styles */
     border: none;
     border-top: 3px solid #ffffff;
     border-left: 3px solid #ffffff;
@@ -201,17 +195,14 @@
     top: 0;
     left: 0;
     transition: all 0.1s;
-    
-    /* Add left border as part of the separation */
     border-left: 2px solid #ffffff;
+    width: 130px; 
   }
   
-  /* Button hover state */
   #confirm-button:hover {
     background-color: #d5d5d5;
   }
   
-  /* Button active/pressed state */
   #confirm-button:active {
     background-color: #aaaaaa;
     border-right: 3px solid #ffffff;
@@ -221,6 +212,7 @@
     left: 2px;
   }
   
+  /* Main content */
   #main-content {
     display: none;
     height: 100%;
