@@ -208,10 +208,32 @@
     left: 2px;
   }
   
-  /* Main content */
+
   #main-content {
     display: none;
     height: 100%;
     text-align: center;
     padding-top: 50px;
   }
+
+.name-container {
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 30px;
+}
+
+.name-logo {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+  font-family: 'PixelOperator', monospace;
+
+}
+  
