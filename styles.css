@@ -4,6 +4,12 @@
     src: url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
     font-display: swap;
   }
+  @font-face {
+    font-family: 'PixelOperatorBold';
+    src: url('fonts/PixelOperator-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
   
   @font-face {
     font-family: 'PixelOperator';
@@ -218,22 +224,38 @@
 
 .name-container {
   text-align: center;
-  margin-top: 15%;
+  margin-top: 8%;
   margin-bottom: 30px;
 }
 
 .name-logo {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   height: auto;
 }
 
 .subtitle {
-  margin-top: 10px;
-  font-size: 20px;
+  margin-top: -20px;
+  font-size: 50px;
   letter-spacing: 1px;
   color: white;
-  font-family: 'PixelOperator', monospace;
+  font-family: 'PixelOperatorBold', monospace; 
+}
 
+.header-title {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 40px;
+}
+
+.student-title {
+  display: inline-block;
+  padding: 15px 15px;
+  background-color: transparent;
+  border: 2px solid #D9D9D9;
+  font-size: 50px;
+  letter-spacing: 2px;
+  color: #D9D9D9;
+  font-family: 'PixelOperatorBold', monospace; 
 }
   
