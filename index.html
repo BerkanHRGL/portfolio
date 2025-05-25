@@ -6,6 +6,10 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pixel-operator" type="text/css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inconsolata:wght@300;400;600&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 </head>
 <body>
@@ -53,8 +57,8 @@
     </div>
   </div>
   
-<!-- Login Screen -->
-<div id="login-screen">
+  <!-- Login Screen -->
+  <div id="login-screen">
     <div id="profile-picture">
       <img src="imgs/retro_cat.png" alt="Cat Profile">
     </div>
@@ -70,31 +74,139 @@
   </div>
   
   <!-- Main Content -->
-<div id="main-content">
-  <div class="header-title">
-    <div class="student-title">STUDENT MEDIA DESIGN</div>
-</div>
-  <div class="name-container">
+  <div id="main-content">
+    <div class="header-title">
+      <div class="student-title">STUDENT MEDIA DESIGN</div>
+    </div>
+    <div class="name-container">
       <img src="imgs/logo.png" alt="Berkan" class="name-logo">
       <div class="subtitle">Based in The Netherlands</div>
+    </div>
+    <div class="bottom-navbar">
+      <div class="navbar-container">
+        <div class="navbar-icon">
+            <img src="imgs/projects.png" alt="Projects">
+        </div>
+        <div class="navbar-icon">
+            <img src="imgs/learning_outcomes.png" alt="Learning-Outcomes">
+        </div>
+        <div class="navbar-icon">
+            <img src="imgs/profile_icon.png" alt="About-Me">
+        </div>
+        <div class="navbar-icon">
+            <img src="imgs/contact.png" alt="Contact">
+        </div>
+      </div>
+    </div>
   </div>
-<div class="bottom-navbar">
-  <div class="navbar-container">
-      <div class="navbar-icon">
-          <img src="imgs/projects.png" alt="Projects">
-      </div>
-      <div class="navbar-icon">
-          <img src="imgs/learning_outcomes.png" alt="Learning-Outcomes">
-      </div>
-      <div class="navbar-icon">
-          <img src="imgs/profile_icon.png" alt="About-Me">
-      </div>
-      <div class="navbar-icon">
-          <img src="imgs/contact.png" alt="Contact">
-      </div>
+  
+  <!-- Overlay voor blur effect - Buiten main-content -->
+  <div class="blur-overlay" style="display: none;"></div>
+  
+  <!-- Windows - Buiten main-content -->
+  <div class="about-me-window" style="display: none;">
+    <div class="window-header">
+      <div class="window-title">LIL' ABOUT ME</div>
+      <div class="window-close">✕</div>
+    </div>
+    <div class="window-content">
+      <p>HEY, I'M BERKAN, A MEDIA DESIGN STUDENT BASED IN THE NETHERLANDS WHO LOVES BLENDING CREATIVITY WITH PURPOSE. I'M ALL ABOUT CRAFTING DESIGNS THAT NOT ONLY LOOK GOOD BUT ALSO FEEL RIGHT TO USE.</p>
+    </div>
+    <div class="window-footer">
+      <div class="about-button">MORE ABOUT ME</div>
+    </div>
   </div>
-</div>
-</div>
+
+  <div class="full-about-me-window" style="display: none;">
+    <div class="window-header">
+      <div class="window-title">ABOUT ME</div>
+      <div class="window-close">✕</div>
+    </div>
+    <div class="window-content">
+      <div class="about-header">
+        <h1>BERKAN<br>HERGUL</h1>
+        <h2>ABOUT ME</h2>
+      </div>
+      <p>HEY, I'M BERKAN, A MEDIA DESIGN STUDENT BASED IN THE NETHERLANDS WHO LOVES BLENDING CREATIVITY WITH PURPOSE. I'M ALL ABOUT CRAFTING DESIGNS THAT NOT ONLY LOOK GOOD BUT ALSO FEEL RIGHT TO USE.</p>
+      <p>As a passionate media designer, I've been developing my skills in UX/UI, front-end development, and visual design. My approach combines technical precision with creative vision, always aiming to create intuitive and engaging user experiences.</p>
+      <p>Education: Currently pursuing a degree in Media Design at Fontys University of Applied Sciences, where I'm developing both my technical and creative abilities.</p>
+      <p>Skills:</p>
+      <ul>
+        <li>UX/UI Design</li>
+        <li>Front-End Development (HTML, CSS, JavaScript)</li>
+        <li>Visual Design</li>
+        <li>Prototyping</li>
+        <li>User Research</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="projects-window" style="display: none;">
+    <div class="window-header">
+      <div class="window-title">PROJECT</div>
+      <div class="window-close">✕</div>
+    </div>
+    
+    <div class="project-header">
+      <div class="header-left">
+        <h1>BERKAN<br>HERGUL</h1>
+      </div>
+      <div class="header-right">
+        <h2>Branding</h2>
+        <h2>Client: Boris Schmidt</h2>
+
+      </div>
+    </div>
+    
+    <div class="project-content-container">
+      <div class="project-menu">
+        <div class="menu-item active">PROJECT 1<br>Branding</div>
+        <div class="menu-item">PROJECT 2<br>UX</div>
+        <div class="menu-item">PROJECT 3<br>DEVELOPMENT</div>
+        <div class="menu-item">PROJECT 4<br>PORTFOLIO</div>
+        <div class="menu-item">PROJECT 5<br>PROJECT X</div>
+      </div>
+      
+      <div class="project-content">
+        <h2>PROJECT OVERVIEW</h2>
+        <p>In this project I had to create a complete visual look for a techno artist named Boris Schmidt. I worked with my team to make visual designs that matched his music style and personality. My goal was to build a unique and easy-to-remember visual brand that would represent Boris Schmidt well.</p>
+        
+        <div class="project-info-row">
+          <div class="tools-section">
+            <h2>TOOLS USED</h2>
+            <ul>
+              <li>Figma</li>
+              <li>Adobe Illustrator</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe InDesign</li>
+            </ul>
+          </div>
+          
+          <div class="date-section">
+            <h3>DATE</h3>
+            <p>February 2025 - March 2025</p>
+          </div>
+        </div>
+
+        <div class="research-section">
+          <h2>RESEARCH PROCESS</h2>
+          <p>I started by studying the techno music scene and Boris Schmidt's music style. I looked at what other techno artists were doing and created mood boards to gather ideas. I interviewed Boris to learn what he wanted for his brand, and also talked to a techno music fan to understand what the audience likes. Using what I learned from these interviews and creating a user persona, I designed visuals that truly represent Boris as an artist. My goal was to create a brand that both Boris and his fans would connect with.</p>
+        </div>
+
+        <div class="moodboard-section">
+          <h2>MOODBOARD</h2>
+          <div class="moodboard-container">
+            <div class="moodboard-image">
+              <img src="imgs/moodboard_boris.png" alt="Boris Schmidt Moodboard">
+            </div>
+            <div class="moodboard-text">
+              <p>As a first step, we made a moodboard together. This helped us see what style and feeling we wanted for the brand. It gave us a clear direction and helped us check if Boris liked our ideas.</p>
+              <p>I picked these images because they capture exactly what Boris wanted, a mysterious vibe with a strong connection to nature. The dark forest photos and abstract patterns create that mysterious feeling he was looking for. The nature images were important because Boris wanted to show his connection to the natural world, not just the club scene. The green lights and black-and-white visuals bring in the techno energy while keeping that mysterious atmosphere.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
 
   <script src="script.js"></script>
 </body>
