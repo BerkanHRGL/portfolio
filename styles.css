@@ -610,7 +610,7 @@ body, html {
 
 .research-section {
   margin-top: 170px; 
-  margin-bottom: 80px; 
+  margin-bottom: 400px; 
 }
 
 .research-section h2 {
@@ -629,7 +629,7 @@ body, html {
 
 .moodboard-section {
   margin-top: 80px;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .moodboard-section h2 {
@@ -654,6 +654,7 @@ body, html {
   width: 100%;
   height: auto;
   border: 2px solid #D9D9D9;
+  cursor: zoom-in;
 }
 
 .moodboard-text {
@@ -662,7 +663,7 @@ body, html {
 }
 
 .moodboard-text p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.4;
   margin: 0 0 20px 0; 
   font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
@@ -671,4 +672,315 @@ body, html {
 
 .moodboard-text p:last-child {
   margin-bottom: 0;
+}
+
+/* Image popup modal styles */
+.image-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000 !important;
+  cursor: pointer;
+}
+
+.image-popup-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001 !important;
+}
+
+.image-popup-content img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 4px solid #D9D9D9;
+  image-rendering: auto;
+  z-index: 10002 !important;
+}
+
+.image-popup-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #D9D9D9;
+  font-size: 30px;
+  font-family: 'VT323', monospace;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border: 2px solid #D9D9D9;
+  z-index: 10003 !important;
+}
+
+.image-popup-close:hover {
+  background-color: rgba(217, 217, 217, 0.2);
+}
+
+/* Add these styles to your existing CSS file */
+.stylescape-section {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.stylescape-section h2 {
+  font-family: 'PixelOperatorBold', monospace;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.stylescape-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.stylescape-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.stylescape-image img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+}
+
+.stylescape-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.stylescape-text p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+}
+
+.stylescape-text p:last-child {
+  margin-bottom: 0;
+}
+
+.iteration-images {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.iteration-item {
+  flex: 1;
+  text-align: center;
+}
+
+.iteration-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+  margin-bottom: 15px;
+}
+
+.iteration-caption {
+  font-size: 14px;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #D9D9D9;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Logo Section Styles */
+.logo-section {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.logo-section h2 {
+  font-family: 'PixelOperatorBold', monospace;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.logo-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.final-logo {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.final-logo img {
+  width: 90%;
+  height: auto;
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.logo-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.logo-text p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+}
+
+.logo-iterations-button {
+  background-color: #D9D9D9;
+  color: #000;
+  padding: 12px 20px;
+  font-family: 'PixelOperatorBold', monospace;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #888888;
+  border-bottom: 3px solid #888888;
+  box-shadow: 2px 2px 0px #000000;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.1s;
+  margin-top: 20px;
+}
+
+.logo-iterations-button:hover {
+  background-color: #e5e5e5;
+}
+
+.logo-iterations-button:active {
+  background-color: #aaaaaa;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  box-shadow: 0px 0px 0px #000000;
+  top: 2px;
+  left: 2px;
+}
+
+/* Logo Iterations Window Styles */
+.logo-iterations-window {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  max-width: 1600px;
+  height: 90%;
+  background-color:#121212;
+  border: 6px solid #D9D9D9;
+  z-index: 3000;
+  font-family: "VT323", monospace;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.logo-iterations-window .window-content {
+  overflow-y: auto;
+  height: 100%;
+  padding: 20px;
+}
+
+.iterations-header {
+  margin-bottom: 30px;
+}
+
+.iterations-header h1 {
+  font-family: 'Upheaval', monospace;
+  font-size: 50px;
+  margin: 0;
+  line-height: 1;
+  color: #D9D9D9;
+}
+
+.iterations-header h2 {
+  font-family: 'PixelOperatorBold', monospace;
+  font-size: 30px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.iterations-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.iteration-stage {
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+
+.iteration-stage:last-child {
+  border-bottom: none;
+}
+
+.iteration-stage h3 {
+  font-family: 'PixelOperatorBold', monospace;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #D9D9D9;
+}
+
+.stage-images {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  justify-content: flex-start;
+}
+
+.stage-images img {
+  width: auto;
+  height: 250px;
+  max-width: 400px; /* Increased to allow wider images */
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+  object-fit: contain; /* This maintains aspect ratio */
+}
+
+.iteration-stage > img {
+  width: auto;
+  height: 250px;
+  max-width: 400px;
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+  margin-bottom: 15px;
+  object-fit: contain; /* This maintains aspect ratio */
+}
+
+.iteration-stage p {
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+  margin: 0;
 }

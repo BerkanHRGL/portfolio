@@ -10,6 +10,12 @@ const enterPrompt = document.querySelector(".enter-prompt");
 const blurOverlay = document.querySelector(".blur-overlay");
 const aboutWindow = document.querySelector('.about-me-window');
 const projectsWindow = document.querySelector('.projects-window');
+const logoIterationsWindow = document.querySelector('.logo-iterations-window');
+
+// Image popup elements
+const imagePopup = document.getElementById('imagePopup');
+const popupImage = document.getElementById('popupImage');
+const closePopup = document.getElementById('closePopup');
 
 loginScreen.style.display = "none";
 mainContent.style.display = "none";
@@ -67,7 +73,7 @@ async function typePassword() {
 }
 
 function setActiveWindow(activeWindow) {
-  const windows = document.querySelectorAll('.about-me-window, .projects-window, .full-about-me-window');
+  const windows = document.querySelectorAll('.about-me-window, .projects-window, .full-about-me-window, .logo-iterations-window');
   
   windows.forEach(window => {
     window.classList.remove('window-active');
@@ -129,15 +135,33 @@ function openWindow(windowElement, fromNavbar = false) {
 
 function closeWindow(windowElement) {
   windowElement.style.display = 'none';
+  windowElement.classList.remove('window-active', 'window-inactive');
   openWindowsCount--;
   console.log("Closed window, count:", openWindowsCount);
+  
+  // Find all visible windows
+  const visibleWindows = [];
+  const windows = document.querySelectorAll('.about-me-window, .projects-window, .full-about-me-window, .logo-iterations-window');
+  
+  windows.forEach(window => {
+    if (window.style.display !== 'none' && window !== windowElement) {
+      visibleWindows.push(window);
+    }
+  });
   
   if (openWindowsCount <= 1) {
     blurOverlay.style.display = 'none';
     
-    if (aboutWindow.style.display !== 'none') {
-      aboutWindow.classList.remove('window-inactive');
-      aboutWindow.classList.add('window-active');
+    // Make the remaining window active
+    if (visibleWindows.length > 0) {
+      visibleWindows[0].classList.remove('window-inactive');
+      visibleWindows[0].classList.add('window-active');
+    }
+  } else {
+    // If there are still multiple windows open, make the most recently visible one active
+    if (visibleWindows.length > 0) {
+      // Activate the last visible window (which would be the projects window in your case)
+      setActiveWindow(visibleWindows[visibleWindows.length - 1]);
     }
   }
 }
@@ -145,11 +169,22 @@ function closeWindow(windowElement) {
 function handleCloseButton(e) {
   e.stopPropagation();
   
-  const window = e.target.closest('.about-me-window, .projects-window, .full-about-me-window');
+  const window = e.target.closest('.about-me-window, .projects-window, .full-about-me-window, .logo-iterations-window');
   if (window) {
     console.log("Closing window", window.className);
     closeWindow(window);
   }
+}
+
+// Image popup functions
+function openImagePopup(imageSrc) {
+  popupImage.src = imageSrc;
+  imagePopup.style.display = 'flex';
+}
+
+function closeImagePopup() {
+  imagePopup.style.display = 'none';
+  popupImage.src = '';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -163,9 +198,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuItems = document.querySelectorAll('.menu-item');
   const fullAboutWindow = document.querySelector('.full-about-me-window');
   
+  // Make only specific windows draggable (NOT the logo iterations window)
   if (aboutWindow) makeDraggable(aboutWindow);
+  if (projectsWindow) makeDraggable(projectsWindow);
+  if (fullAboutWindow) makeDraggable(fullAboutWindow);
   
-  document.querySelectorAll('.about-me-window, .projects-window, .full-about-me-window').forEach(window => {
+  // Add all windows to mousedown event listener for active window setting
+  document.querySelectorAll('.about-me-window, .projects-window, .full-about-me-window, .logo-iterations-window').forEach(window => {
     window.addEventListener('mousedown', () => {
       setActiveWindow(window);
     });
@@ -218,6 +257,40 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.add('active');
     });
   });
+
+  // Image popup event listeners
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('clickable-image')) {
+      e.preventDefault();
+      openImagePopup(e.target.src);
+    }
+  });
+
+  // Close popup when clicking the close button
+  closePopup.addEventListener('click', closeImagePopup);
+
+  // Close popup when clicking outside the image
+  imagePopup.addEventListener('click', function(e) {
+    if (e.target === imagePopup) {
+      closeImagePopup();
+    }
+  });
+
+  // Close popup with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && imagePopup.style.display === 'flex') {
+      closeImagePopup();
+    }
+  });
+
+  // Logo iterations button event listener
+  const logoIterationsButton = document.querySelector('.logo-iterations-button');
+
+  if (logoIterationsButton) {
+    logoIterationsButton.addEventListener('click', () => {
+      openWindow(logoIterationsWindow, true);
+    });
+  }
 });
 
 document.addEventListener('keydown', function(event) {
