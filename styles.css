@@ -217,7 +217,6 @@ body, html {
   left: 2px;
 }
 
-
 #main-content {
   background-color: #000; 
   background-image: url('imgs/background.png'); 
@@ -347,7 +346,7 @@ body, html {
   font-size: 20px;
 }
 
-.-footer {
+.window-footer {
   display: flex;
   justify-content: flex-start;
   padding: 10px 15px 15px;
@@ -375,7 +374,6 @@ body, html {
   transform: rotate(45deg);
 }
 
-
 .project-header {
   padding: 15px;
   background-color: #000;
@@ -394,7 +392,6 @@ body, html {
 .header-right {
   width: auto;
   padding-left: 0px;
-  
 }
 
 .project-header h1 {
@@ -465,7 +462,6 @@ body, html {
   font-size: 30px;
   margin-top: 0;
   color: #fff;
-
 }
 
 .project-content h3 {
@@ -479,9 +475,7 @@ body, html {
   line-height: 1.4;
   margin-bottom: 15px;
   font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
-
 }
-
 
 .blur-overlay {
   position: fixed;
@@ -494,7 +488,6 @@ body, html {
   -webkit-backdrop-filter: blur(5px);
   z-index: 2000;
 }
-
 
 .window-active {
   z-index: 3500 !important;
@@ -620,6 +613,14 @@ body, html {
   color: #fff;
 }
 
+.research-section h3 {
+  font-family: 'PixelOperatorBold', monospace;
+  font-size: 28px;
+  margin-top: 200px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
 .research-section p {
   font-size: 20px;
   line-height: 1.4;
@@ -725,7 +726,6 @@ body, html {
   background-color: rgba(217, 217, 217, 0.2);
 }
 
-/* Add these styles to your existing CSS file */
 .stylescape-section {
   margin-top: 80px;
   margin-bottom: 100px;
@@ -802,7 +802,6 @@ body, html {
   font-style: italic;
 }
 
-/* Logo Section Styles */
 .logo-section {
   margin-top: 80px;
   margin-bottom: 100px;
@@ -849,7 +848,11 @@ body, html {
   color: #fff;
 }
 
-.logo-iterations-button {
+.logo-iterations-button,
+.interview-details-button,
+.content-strategy-button,
+.research-details-button,
+.wireframe-details-button {
   background-color: #D9D9D9;
   color: #000;
   padding: 12px 20px;
@@ -871,11 +874,19 @@ body, html {
   margin-top: 20px;
 }
 
-.logo-iterations-button:hover {
+.logo-iterations-button:hover,
+.interview-details-button:hover,
+.content-strategy-button:hover,
+.research-details-button:hover,
+.wireframe-details-button:hover {
   background-color: #e5e5e5;
 }
 
-.logo-iterations-button:active {
+.logo-iterations-button:active,
+.interview-details-button:active,
+.content-strategy-button:active,
+.research-details-button:active,
+.wireframe-details-button:active {
   background-color: #aaaaaa;
   border-right: 3px solid #ffffff;
   border-bottom: 3px solid #ffffff;
@@ -884,8 +895,11 @@ body, html {
   left: 2px;
 }
 
-/* Logo Iterations Window Styles */
-.logo-iterations-window {
+.logo-iterations-window,
+.interview-details-window,
+.content-strategy-window,
+.research-details-window,
+.wireframe-details-window {
   position: fixed;
   top: 50px;
   left: 0;
@@ -904,17 +918,29 @@ body, html {
   overflow: hidden;
 }
 
-.logo-iterations-window .window-content {
+.logo-iterations-window .window-content,
+.interview-details-window .window-content,
+.content-strategy-window .window-content,
+.research-details-window .window-content,
+.wireframe-details-window .window-content {
   overflow-y: auto;
   height: 100%;
   padding: 20px;
 }
 
-.iterations-header {
+.iterations-header,
+.interview-header,
+.strategy-header,
+.research-header,
+.wireframe-process-header {
   margin-bottom: 30px;
 }
 
-.iterations-header h1 {
+.iterations-header h1,
+.interview-header h1,
+.strategy-header h1,
+.research-header h1,
+.wireframe-process-header h1 {
   font-family: 'Upheaval', monospace;
   font-size: 50px;
   margin: 0;
@@ -922,7 +948,9 @@ body, html {
   color: #D9D9D9;
 }
 
-.iterations-header h2 {
+.iterations-header h2,
+.interview-header h2,
+.strategy-header h2 {
   font-family: 'PixelOperatorBold', monospace;
   font-size: 30px;
   margin-top: 10px;
@@ -935,16 +963,19 @@ body, html {
   gap: 40px;
 }
 
-.iteration-stage {
+.iteration-stage,
+.wireframe-stage {
   border-bottom: 1px solid #333;
   padding-bottom: 30px;
 }
 
-.iteration-stage:last-child {
+.iteration-stage:last-child,
+.wireframe-stage:last-child {
   border-bottom: none;
 }
 
-.iteration-stage h3 {
+.iteration-stage h3,
+.wireframe-stage h3 {
   font-family: 'PixelOperatorBold', monospace;
   font-size: 24px;
   margin-bottom: 15px;
@@ -961,26 +992,751 @@ body, html {
 .stage-images img {
   width: auto;
   height: 250px;
-  max-width: 400px; /* Increased to allow wider images */
+  max-width: 400px;
   border: 2px solid #D9D9D9;
   cursor: zoom-in;
-  object-fit: contain; /* This maintains aspect ratio */
+  object-fit: contain;
 }
 
-.iteration-stage > img {
+.iteration-stage > img,
+.wireframe-stage > img {
   width: auto;
   height: 250px;
   max-width: 400px;
   border: 2px solid #D9D9D9;
   cursor: zoom-in;
   margin-bottom: 15px;
-  object-fit: contain; /* This maintains aspect ratio */
+  object-fit: contain;
 }
 
-.iteration-stage p {
+.iteration-stage p,
+.wireframe-stage p {
   font-size: 16px;
   line-height: 1.4;
   font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
   color: #fff;
   margin: 0;
+}
+
+.interview-details-window p,
+.content-strategy-window p,
+.research-details-window p,
+.wireframe-details-window p {
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.interview-details-window h3,
+.content-strategy-window h3,
+.research-details-window h3 {
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #D9D9D9;
+  font-weight: bold;
+}
+
+.content-strategy-window h4,
+.research-details-window h4 {
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #D9D9D9;
+  font-weight: bold;
+}
+
+.interview-qa p {
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.interview-qa strong {
+  color: #D9D9D9;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 0px;
+}
+
+.interview-details-window ul,
+.content-strategy-window ul,
+.research-details-window ul {
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.interview-details-window li,
+.content-strategy-window li,
+.research-details-window li {
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.persona-container,
+.survey-container,
+.wireframe-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.persona-image,
+.survey-image,
+.wireframe-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.survey-image {
+  max-width: 40%;
+}
+
+.persona-image img,
+.survey-image img,
+.wireframe-image img {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.survey-image img {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.persona-text,
+.survey-text,
+.wireframe-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.survey-text {
+  max-width: 60%;
+}
+
+.persona-text p,
+.survey-text p,
+.wireframe-text p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+}
+
+.wireframe-text p {
+  font-size: 15px;
+}
+
+.survey-text p {
+  font-size: 20px;
+}
+
+.persona-text p:last-child,
+.survey-text p:last-child,
+.wireframe-text p:last-child {
+  margin-bottom: 0;
+}
+
+.content-strategy-window .window-content {
+  overflow-y: scroll;
+  height: calc(100% - 60px);
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+.mockups-section,
+.presentation-section {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.mockups-section h2,
+.presentation-section h2 {
+  font-family: 'PixelOperatorBold', monospace;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.mockups-images {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.mockup-item {
+  flex: 1;
+  text-align: center;
+}
+
+.mockup-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+}
+
+.mockups-text {
+  max-width: 100%;
+}
+
+.mockups-text p,
+.presentation-section p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+}
+
+.mockups-text p:last-child {
+  margin-bottom: 0;
+}
+
+.presentation-image {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Planning Section Styles */
+.planning-section {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.planning-section h2 {
+  font-family: 'PixelOperatorBold', monospace;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.planning-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.planning-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.planning-image img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+}
+
+.planning-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.planning-text p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+}
+
+.planning-text p:last-child {
+  margin-bottom: 0;
+}
+
+.research-details-window strong {
+  color: #D9D9D9;
+  font-weight: bold;
+}
+
+.presentation-image img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.prototype-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.prototype-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.prototype-image img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+}
+
+.prototype-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.prototype-text p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+}
+
+.prototype-text p:last-child {
+  margin-bottom: 0;
+}
+
+.prototype-full-image {
+  width: 100%;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.prototype-full-image img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+}
+
+.final-presentation-image {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.final-presentation-image img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.design-process-button {
+  background-color: #D9D9D9;
+  color: #000;
+  padding: 12px 20px;
+  font-family: 'PixelOperatorBold', monospace;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #888888;
+  border-bottom: 3px solid #888888;
+  box-shadow: 2px 2px 0px #000000;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.1s;
+  margin-top: 20px;
+}
+
+.design-process-button:hover {
+  background-color: #e5e5e5;
+}
+
+.design-process-button:active {
+  background-color: #aaaaaa;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  box-shadow: 0px 0px 0px #000000;
+  top: 2px;
+  left: 2px;
+}
+
+.research-section,
+.planning-section,
+.persona-section,
+.design-process-section,
+.presenting-section {
+  margin-top: 170px; 
+  margin-bottom: 400px; 
+}
+
+.design-process-section h3 {
+  margin-top: 400px;
+}
+
+/* Additional button styles for development project */
+.project-plan-button,
+.user-test-button {
+  background-color: #D9D9D9;
+  color: #000;
+  padding: 12px 20px;
+  font-family: 'PixelOperatorBold', monospace;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #888888;
+  border-bottom: 3px solid #888888;
+  box-shadow: 2px 2px 0px #000000;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.1s;
+  margin-top: 20px;
+}
+
+.project-plan-button:hover,
+.user-test-button:hover {
+  background-color: #e5e5e5;
+}
+
+.project-plan-button:active,
+.user-test-button:active {
+  background-color: #aaaaaa;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  box-shadow: 0px 0px 0px #000000;
+  top: 2px;
+  left: 2px;
+}
+
+.gitlab-repo-button {
+  background-color: #D9D9D9;
+  color: #000;
+  padding: 12px 20px;
+  font-family: 'PixelOperatorBold', monospace;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #888888;
+  border-bottom: 3px solid #888888;
+  box-shadow: 2px 2px 0px #000000;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.1s;
+  margin-top: 20px;
+}
+
+.gitlab-repo-button:hover {
+  background-color: #e5e5e5;
+}
+
+.gitlab-repo-button:active {
+  background-color: #aaaaaa;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  box-shadow: 0px 0px 0px #000000;
+  top: 2px;
+  left: 2px;
+}
+
+.five-second-test-button {
+  background-color: #D9D9D9;
+  color: #000;
+  padding: 12px 20px;
+  font-family: 'PixelOperatorBold', monospace;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #888888;
+  border-bottom: 3px solid #888888;
+  box-shadow: 2px 2px 0px #000000;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.1s;
+  margin-top: 20px;
+}
+
+.five-second-test-button:hover {
+  background-color: #e5e5e5;
+}
+
+.five-second-test-button:active {
+  background-color: #aaaaaa;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  box-shadow: 0px 0px 0px #000000;
+  top: 2px;
+  left: 2px;
+}
+
+.ab-test-button {
+  background-color: #D9D9D9;
+  color: #000;
+  padding: 12px 20px;
+  font-family: 'PixelOperatorBold', monospace;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #888888;
+  border-bottom: 3px solid #888888;
+  box-shadow: 2px 2px 0px #000000;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.1s;
+  margin-top: 20px;
+}
+
+.ab-test-button:hover {
+  background-color: #e5e5e5;
+}
+
+.ab-test-button:active {
+  background-color: #aaaaaa;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  box-shadow: 0px 0px 0px #000000;
+  top: 2px;
+  left: 2px;
+}
+
+.carousel-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin: 30px 0;
+}
+
+.carousel-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.carousel-right {
+  flex: 1;
+  max-width: 50%;
+}
+
+.image-carousel {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.carousel-container {
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-container img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(217, 217, 217, 0.9);
+  color: #000;
+  border: none;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'PixelOperatorBold', monospace;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #888888;
+  border-bottom: 2px solid #888888;
+  box-shadow: 1px 1px 0px #000000;
+  transition: all 0.1s;
+  z-index: 10;
+  line-height: 1;
+  padding: 0;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(229, 229, 229, 0.9);
+}
+
+.carousel-arrow:active {
+  background-color: rgba(170, 170, 170, 0.9);
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+.carousel-counter {
+  font-family: 'PixelOperatorBold', monospace;
+  font-size: 20px;
+  color: #D9D9D9;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.carousel-right h3 {
+  font-family: 'PixelOperatorBold', monospace;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #D9D9D9;
+  margin-top: 0;
+}
+
+.carousel-right p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+}
+
+#carousel-description {
+  font-weight: bold;
+  color: #D9D9D9;
+}
+
+.pixel-art-section {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.pixel-art-section h2 {
+  font-family: 'PixelOperatorBold', monospace;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.pixel-art-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.pixel-art-image {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.pixel-art-image img {
+  width: 90%;
+  height: auto;
+  border: 2px solid #D9D9D9;
+  cursor: zoom-in;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.pixel-art-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.pixel-art-text p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
+  color: #fff;
+}
+
+.github-repo-button {
+  background-color: #D9D9D9;
+  color: #000;
+  padding: 12px 20px;
+  font-family: 'PixelOperatorBold', monospace;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #888888;
+  border-bottom: 3px solid #888888;
+  box-shadow: 2px 2px 0px #000000;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.1s;
+  margin-top: 20px;
+}
+
+.github-repo-button:hover {
+  background-color: #e5e5e5;
+}
+
+.github-repo-button:active {
+  background-color: #aaaaaa;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  box-shadow: 0px 0px 0px #000000;
+  top: 2px;
+  left: 2px;
+}
+
+/* CSS for Learning Outcomes Window */
+.learning-outcomes-window {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1400px; 
+  height: 85%;
+  background-color:#121212;
+  border: 6px solid #D9D9D9;
+  z-index: 3000;
+  font-family: "VT323", monospace;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: default;
 }

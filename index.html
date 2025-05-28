@@ -100,10 +100,10 @@
     </div>
   </div>
   
-  <!-- Overlay voor blur effect - Buiten main-content -->
+  <!-- Overlay voor blur effect -->
   <div class="blur-overlay" style="display: none;"></div>
   
-  <!-- Windows - Buiten main-content -->
+  <!-- Windows -->
   <div class="about-me-window" style="display: none;">
     <div class="window-header">
       <div class="window-title">LIL' ABOUT ME</div>
@@ -141,6 +141,73 @@
     </div>
   </div>
 
+  <!-- Projects Window -->
+  <div class="projects-window" style="display: none;">
+    <div class="window-header">
+      <div class="window-title">PROJECT</div>
+      <div class="window-close">✕</div>
+    </div>
+    
+    <div class="project-header">
+      <div class="header-left">
+        <h1>BERKAN<br>HERGUL</h1>
+      </div>
+      <div class="header-right">
+        <h2 id="project-type">Branding</h2>
+        <h2 id="project-client">Client: Boris Schmidt</h2>
+      </div>
+    </div>
+    
+    <div class="project-content-container">
+      <div class="project-menu">
+        <div class="menu-item active" data-project="branding">PROJECT 1<br>Branding</div>
+        <div class="menu-item" data-project="ux">PROJECT 2<br>UX</div>
+        <div class="menu-item" data-project="development">PROJECT 3<br>DEVELOPMENT</div>
+        <div class="menu-item" data-project="portfolio">PROJECT 4<br>PORTFOLIO</div>
+        <div class="menu-item" data-project="projectx">PROJECT 5<br>PROJECT X</div>
+      </div>
+      
+      <!-- Project Content Container -->
+      <div class="project-content" id="project-content">
+        <!-- Content will be loaded here based on selected project -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Learning Outcomes Window -->
+<div class="learning-outcomes-window" style="display: none;">
+  <div class="window-header">
+    <div class="window-title">LEARNING OUTCOMES</div>
+    <div class="window-close">✕</div>
+  </div>
+  
+  <div class="project-header">
+    <div class="header-left">
+      <h1>BERKAN<br>HERGUL</h1>
+    </div>
+    <div class="header-right">
+      <h2 id="learning-outcome-type">Interactive Media</h2>
+    </div>
+  </div>
+  
+  <div class="project-content-container">
+    <div class="project-menu">
+      <div class="menu-item active" data-outcome="interactive-media">LEARNING OUTCOME<br>Interactive Media</div>
+      <div class="menu-item" data-outcome="design">LEARNING OUTCOME<br>Design</div>
+      <div class="menu-item" data-outcome="development">LEARNING OUTCOME<br>Development</div>
+      <div class="menu-item" data-outcome="professional-standard">LEARNING OUTCOME<br>Professional Standard</div>
+      <div class="menu-item" data-outcome="personal-leadership">LEARNING OUTCOME<br>Personal Leadership</div>
+    </div>
+    
+    <!-- Learning Outcome Content Container -->
+    <div class="project-content" id="learning-outcome-content">
+      <!-- Content will be loaded here based on selected learning outcome -->
+      <p>Content for Interactive Media learning outcome will be added here.</p>
+    </div>
+  </div>
+</div>
+
+  <!-- Additional Windows (Logo Iterations, Interview Details, Content Strategy) -->
   <div class="logo-iterations-window" style="display: none;">
     <div class="window-header">
       <div class="window-title">LOGO DESIGN PROCESS</div>
@@ -198,121 +265,301 @@
     </div>
   </div>
 
-  <div class="projects-window" style="display: none;">
+  <div class="interview-details-window" style="display: none;">
     <div class="window-header">
-      <div class="window-title">PROJECT</div>
+      <div class="window-title">INTERVIEW DETAILS</div>
       <div class="window-close">✕</div>
     </div>
-    
-    <div class="project-header">
-      <div class="header-left">
-        <h1>BERKAN<br>HERGUL</h1>
+    <div class="window-content">
+      <div class="interview-header">
+        <h1>TARGET AUDIENCE RESEARCH</h1>
       </div>
-      <div class="header-right">
-        <h2>Branding</h2>
-        <h2>Client: Boris Schmidt</h2>
-
-      </div>
-    </div>
-    
-    <div class="project-content-container">
-      <div class="project-menu">
-        <div class="menu-item active">PROJECT 1<br>Branding</div>
-        <div class="menu-item">PROJECT 2<br>UX</div>
-        <div class="menu-item">PROJECT 3<br>DEVELOPMENT</div>
-        <div class="menu-item">PROJECT 4<br>PORTFOLIO</div>
-        <div class="menu-item">PROJECT 5<br>PROJECT X</div>
+      <p>I did research about the target audience through tests and interviews to better understand techno fans and what they want from artists and brands.</p>
+      
+      <h3>INTERVIEW WITH SOPHIE (20 YEARS OLD)</h3>
+      
+      <div class="interview-qa">
+        <p><strong>What genre of techno do you listen to?</strong><br>
+        More towards melodic and minimal techno. I love the deep sound of artists like Tale of Us and Adriatique.</p>
+        
+        <p><strong>Why do you listen to this music?</strong><br>
+        It helps me relax and get into a certain mood. Sometimes it's even a bit calming.</p>
+        
+        <p><strong>When do you listen to this music?</strong><br>
+        Often in the car, at work, or just at home.</p>
+        
+        <p><strong>Who is your favorite techno artist?</strong><br>
+        Tale of Us and Mind Against.</p>
+        
+        <p><strong>Which platform do you use most for music?</strong><br>
+        Spotify, because I can easily make playlists there and discover new songs through the algorithms.</p>
+        
+        <p><strong>Do you make your own playlists or listen to ready-made ones?</strong><br>
+        I always make my own playlists. Spotify's playlists are sometimes too mainstream for my taste.</p>
+        
+        <p><strong>Do you go to festivals?</strong><br>
+        Yes, but I prefer festivals with a relaxed atmosphere like DGTL and Afterlife events.</p>
+        
+        <p><strong>Do you pay attention to album covers?</strong><br>
+        Yes, I think a cover can really say something about the music.</p>
+        
+        <p><strong>Do you follow artists on social media?</strong><br>
+        Yes, especially on Instagram. I like to see what their inspiration is and how they build their sets.</p>
       </div>
       
-      <div class="project-content">
-        <h2>PROJECT OVERVIEW</h2>
-        <p>In this project I had to create a complete visual look for a techno artist named Boris Schmidt. I worked with my team to make visual designs that matched his music style and personality. My goal was to build a unique and easy-to-remember visual brand that would represent Boris Schmidt well.</p>
-        
-        <div class="project-info-row">
-          <div class="tools-section">
-            <h2>TOOLS USED</h2>
-            <ul>
-              <li>Figma</li>
-              <li>Adobe Illustrator</li>
-              <li>Adobe Photoshop</li>
-            </ul>
-          </div>
-          
-          <div class="date-section">
-            <h3>DATE</h3>
-            <p>February 2025 - March 2025</p>
-          </div>
-        </div>
+      <h3>CONCLUSION BASED ON SOPHIE</h3>
+      <p>Sophie loves techno, but especially the calm and melodic side, like Tale of Us and Mind Against. For her, it's not just about hard beats, but about atmosphere and emotion. She listens to techno to relax, for example at home or in the car.</p>
+      
+      <p>She uses Spotify to listen to music and likes to discover new songs through the algorithms. She makes her own playlists because she finds ready-made playlists often too popular or not quite her taste.</p>
+      
+      <p>When it comes to festivals, Sophie chooses parties with a relaxed atmosphere, like DGTL and Afterlife events. This shows that she prefers beautiful light shows and a nice environment over hard, industrial techno.</p>
+      
+      <p>She also looks at album covers. A beautiful, minimalist cover makes her curious about the music. This means that the appearance of an album or track influences whether she will listen to it.</p>
+      
+      <p>On social media, she follows artists mainly on Instagram. She finds it interesting to see how they make their music and prepare. Artists who show what inspires them and how they work get her attention.</p>
+      
+      <h3>HOW I USED THIS FOR MY DESIGN</h3>
+      <p>Based on Sophie's interview, I learned that techno fans want more than just music - they want atmosphere, emotion, and beautiful visuals. This helped me design Boris Schmidt's brand to focus on:</p>
+      
+      <ul>
+        <li>Creating a mysterious and atmospheric visual style that matches the mood Sophie and similar fans are looking for</li>
+        <li>Designing clean, minimalist covers that would catch Sophie's attention on Spotify</li>
+        <li>Building a brand that works well on Instagram, where Sophie discovers and follows artists</li>
+        <li>Focusing on the connection between nature and techno, which appeals to fans who want relaxed, atmospheric experiences</li>
+      </ul>
+      
+      <p>The interview confirmed that Boris Schmidt's vision of combining techno with nature and mystery would appeal to this target audience.</p>
+    </div>
+  </div>
 
-        <div class="research-section">
-          <h2>RESEARCH PROCESS</h2>
-          <p>I started by studying the techno music scene and Boris Schmidt's music style. I looked at what other techno artists were doing and created mood boards to gather ideas. I interviewed Boris to learn what he wanted for his brand, and also talked to a techno music fan to understand what the audience likes. Using what I learned from these interviews and creating a user persona, I designed visuals that truly represent Boris as an artist. My goal was to create a brand that both Boris and his fans would connect with.</p>
-        </div>
-
-        <div class="moodboard-section">
-          <h2>MOODBOARD</h2>
-          <div class="moodboard-container">
-            <div class="moodboard-image">
-              <img src="imgs/moodboard_boris.png" alt="Boris Schmidt Moodboard" class="clickable-image">
-            </div>
-            <div class="moodboard-text">
-              <p>As a first step, we made a moodboard together. This helped us see what style and feeling we wanted for the brand. It gave us a clear direction and helped us check if Boris liked our ideas.</p>
-              <p>I picked these images because they capture exactly what Boris wanted, a mysterious vibe with a strong connection to nature. The dark forest photos and abstract patterns create that mysterious feeling he was looking for. The nature images were important because Boris wanted to show his connection to the natural world, not just the club scene. The green lights and black-and-white visuals bring in the techno energy while keeping that mysterious atmosphere. For the typography, I chose bold, technical fonts that look both modern and industrial, matching the techno music style.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="stylescape-section">
-          <h2>STYLE SCAPE</h2>
-          
-          <!-- Final Style Scape -->
-          <div class="stylescape-container">
-            <div class="stylescape-image">
-              <img src="imgs/stylescape_3.png" alt="Final Style Scape for Boris Schmidt" class="clickable-image">
-            </div>
-            <div class="stylescape-text">
-              <p>This is the final style scape that shows the complete visual look for Boris Schmidt. It brings together all the parts we worked on - the dark forest look, bold fonts, and the mix between nature and techno music culture.</p>
-              <p>The final design gives Boris exactly what he wanted: a brand that feels connected to nature and fits perfectly in the underground techno scene. The dark colors and strong geometric logo create the mysterious but friendly identity he was looking for.</p>
-              <p>During the design work, I made different style scape versions to try out ideas and make the visual style better. Below are two important versions that helped create the final design:</p>
-            </div>
-          </div>
-
-          <!-- Iteration Images -->
-          <div class="iteration-images">
-            <div class="iteration-item">
-              <img src="imgs/stylescape_1.png" alt="Style Scape Iteration 1" class="clickable-image">
-              <p class="iteration-caption">Iteration 1: Initial exploration of the visual direction</p>
-            </div>
-            <div class="iteration-item">
-              <img src="imgs/stylescape_2.png" alt="Style Scape Iteration 2" class="clickable-image">
-              <p class="iteration-caption">Iteration 2: Refined approach with stronger nature elements</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="logo-section">
-          <h2>LOGO DESIGN</h2>
-          <div class="logo-container">
-            <div class="final-logo">
-              <img src="imgs/logo_boris_14.png" alt="Final Boris Schmidt Logo" class="clickable-image">
-            </div>
-            <div class="logo-text">
-              <p>The final logo combines sound waves with geometric shapes to represent Boris's connection between techno music and nature. The sound wave pattern in the center shows the music element, while the organic flowing shapes around it represent the natural world he draws inspiration from.</p>
-              <p>The logo works well in different sizes and can be used across all brand materials. The black and white version ensures it works in any situation, while the design captures both the technical and natural sides of Boris's identity.</p>
-              <button class="logo-iterations-button">VIEW DESIGN PROCESS</button>
-            </div>
-          </div>
-        </div>
-
+  <div class="content-strategy-window" style="display: none;">
+    <div class="window-header">
+      <div class="window-title">CONTENT STRATEGY</div>
+      <div class="window-close">✕</div>
+    </div>
+    <div class="window-content">
+      <div class="strategy-header">
+        <h1>CONTENT STRATEGY</h1>
       </div>
+      
+      <p>I created this content strategy because it's important to present the brand in a consistent way. With a clear strategy, I know what tone, style, and type of content we should use to reach the right target audience. It helps me convey the message effectively and increase brand visibility.</p>
+  
+      <h3>1. BEST DAYS AND TIMES TO POST</h3>
+      <p>Optimizing posting times increases visibility and engagement. For Boris, the following moments are ideal:</p>
+      
+      <h4>Instagram:</h4>
+      <p>Best Days: Friday, followed by Saturday and Tuesday<br>
+      Time: Between 6:00 PM and 8:59 PM, with a peak around 8:00 PM</p>
+      
+      <h4>TikTok:</h4>
+      <p>Monday: 6:00 AM, 10:00 AM, 10:00 PM<br>
+      Tuesday: 2:00 AM, 4:00 AM, 6:00 AM<br>
+      Wednesday: 8:00 AM, 9:00 AM, 11:00 PM<br>
+      Thursday: 9:00 AM, 12:00 PM, 6:00 PM<br>
+      Friday: 6:00 AM, 1:00 PM, 4:00 PM<br>
+      Saturday: 11:00 AM, 7:00 PM, 8:00 PM<br>
+      Sunday: 7:00 AM, 9:00 AM, 4:00 PM</p>
+  
+      <h3>2. RECOMMENDED CONTENT TYPES</h3>
+      <p>Diversifying content keeps the target audience engaged and interested:</p>
+      <ul>
+        <li>Behind the Scenes (BTS): Show the creative process, studio recordings, and rehearsals</li>
+        <li>Q&A Sessions: Answer fan questions through live videos or stories</li>
+        <li>Polls and Surveys: Ask about fan preferences for setlists, merchandise, or future releases</li>
+        <li>Skits: These often work well with this generation if done properly</li>
+        <li>User-Generated Content (UGC): Share fan content like photos or videos from performances</li>
+      </ul>
+  
+      <h3>3. COMPETITOR RESEARCH</h3>
+      <p>Learning from other techno artists can provide valuable insights:</p>
+      <ul>
+        <li>Collaborations: Work with other artists or influencers to reach a broader audience</li>
+        <li>Live Sessions: Organize live streams on platforms like Instagram and TikTok for direct fan interaction</li>
+        <li>Hashtag Usage: Use relevant hashtags to increase post visibility and attract new followers</li>
+        <li>Visual Consistency: Maintain a cohesive aesthetic on platforms like Instagram to strengthen the brand</li>
+      </ul>
+  
+      <h3>4. PLATFORM-SPECIFIC CONTENT RECOMMENDATIONS</h3>
+      
+      <h4>TikTok:</h4>
+      <p>Content: Short, trend-focused videos with quick edits and catchy music<br>
+      Strategy: Share snippets of new tracks, challenges, and collaborations with other creators</p>
+      
+      <h4>Instagram:</h4>
+      <p>Content: Visually appealing photos, reels, and stories that give a glimpse into Boris' personal life and career<br>
+      Strategy: Share BTS moments, announcements, and fan interaction through polls and Q&As</p>
+  
+      <h3>5. PROMOTION INITIATIVES</h3>
+      <ul>
+        <li>Tagging Labels and Events: Increase visibility by tagging relevant labels and events</li>
+        <li>Collaborations: Work with other artists or influencers for cross-promotion</li>
+        <li>Live Sessions: Organize live streams for real-time fan interaction</li>
+        <li>Hashtag Campaigns: Create brand-related hashtags and encourage fans to use them</li>
+        <li>User-Generated Content: Encourage fans to share their experiences</li>
+        <li>Advertisements: Invest in targeted ads on TikTok and Instagram</li>
+      </ul>
+  
+      <h3>6. HASHTAGS</h3>
+      
+      <h4>General Techno Hashtags:</h4>
+      <p>#techno #technomusic #undergroundtechno #technodj #technoset #electronicmusic #edmcommunity #raveculture</p>
+      
+      <h4>Festival and Club Hashtags:</h4>
+      <p>#technofestival #clubculture #warehouserave #technorave #berlintechno #ibizatechno #technoscene</p>
+      
+      <h4>For DJs and Producers:</h4>
+      <p>#djlife #musicproducer #technoproducer #studiosessions #undergroundmusic #modularsynths #drummachines</p>
+      
+      <h4>Trending Hashtags:</h4>
+      <p>#technovibes #technolovers #hardtechno #acidtechno #melodictechno #technocommunity</p>
+      
+      <h4>Events and Labels:</h4>
+      <p>#awakenings #timewarp #ade #drumcode #afterlife #boilerroom #berghain</p>
+      
+      <h4>Personal Hashtags:</h4>
+      <p>#boristechno #borislive</p>
+    </div>
+  </div>
+
+  <div class="research-details-window" style="display: none;">
+    <div class="window-header">
+      <div class="window-title">RESEARCH DETAILS</div>
+      <div class="window-close">✕</div>
+    </div>
+    <div class="window-content">
+      <div class="research-header">
+        <h1>DIGITAL ACCESSIBILITY RESEARCH</h1>
+      </div>
+      
+      <h3>FIELD RESEARCH - COMPETITIVE ANALYSIS</h3>
+      <p><strong>Research method:</strong> libary research</p>
+      <p>I conducted research to identify existing companies specializing in digital accessibility for people with disabilities, similar to Cardan's mission.</p>
+      
+      <h4>Competitor: Stuurlui</h4>
+      <p>Stuurlui is a Wordpress agency from Utrecht specializing in digital accessibility. They design, build, and maintain websites that comply with WCAG 2.2 standards, making them accessible to everyone, including people with disabilities.</p>
+
+      <p>Stuurlui not only builds accessible websites but also shares helpful guides and articles. These guides explain the WCAG 2.2 rules in simple words so other organizations can learn how to follow them more easily.</p>
+      
+      <p>Their research showed significant accessibility gaps in the Dutch market:</p>
+      <ul>
+        <li>Evaluated homepages of all 73 public hospitals in the Netherlands for accessibility compliance</li>
+        <li>Found that only 23% of 355 municipal websites met established accessibility guidelines</li>
+        <li>Provide practical guides and articles to help organizations improve digital accessibility</li>
+      </ul>
+      
+      <h3>VISUAL IMPAIRMENT RESEARCH</h3>
+      
+      <h4>What is visual impairment?</h4>
+      <p>Visual impairment means someone sees less than 30% or has a visual field smaller than 30 degrees. A normal visual field with both eyes is approximately 180 degrees (150 degrees with one eye). The visual limitation cannot be corrected by wearing glasses or contact lenses.</p>
+      
+      <h4>Types of Visual Impairments:</h4>
+      <ul>
+        <li><strong>Blurred Vision</strong> - Has hazy or unclear sight</li>
+        <li><strong>Tunnel Vision</strong> - Vision appears as if looking through a tube</li>
+        <li><strong>Central Vision Loss</strong> - Sees a black spot centrally in their vision</li>
+      </ul>
+      
+      <h4>Web accesibility problems for visually impaired users:</h4>
+      <ul>
+        <li><strong>Poor color contrast</strong> - Reading becomes difficult due to insufficient contrast between text and background</li>
+        <li><strong>Small or non-scalable text</strong> - Some websites block zooming functionality</li>
+        <li><strong>Images without descriptions</strong> - Images without alt-text are useless for screen readers</li>
+        <li><strong>Illogical structure and navigation</strong> - Lack of clear headings and logical layout makes quick page navigation difficult</li>
+        <li><strong>Moving or flashing content</strong> - Animations, carousels, and auto-moving content can be distracting and harder to read</li>
+        <li><strong>Forms and input fields</strong> - Forms can be problematic without clear labels explaining their purpose</li>
+        <li><strong>No screen reader support</strong> - Interactive elements like buttons and dropdowns may not work properly with screen readers</li>
+      </ul>
+      
+      <h4>Solutions for better accessibility:</h4>
+      <ul>
+        <li><strong>Screen reader/TTS</strong> - Text on web pages is read aloud by a voice</li>
+        <li><strong>Alt-Text</strong> - Adding alt-text to sources like images allows screen readers to describe them</li>
+        <li><strong>Logical structure and navigation</strong> - Use clear buttons and ensure good structure</li>
+        <li><strong>Avoid moving and flashing content</strong> - Reduce distracting animations</li>
+        <li><strong>Accessible forms</strong> - Input fields must have clear labels and avoid disappearing placeholders</li>
+      </ul>
+      
+      <h3>TARGET AUDIENCE RESEARCH</h3>
+      
+      <h4>Research goal</h4>
+      <p>The goal of this research was to gain insight into the needs, problems, and desires of professionals within government institutions who work with digital accessibility.</p>
+      
+      <h4>Target Group Description</h4>
+      <p>The primary target group consists of policy advisors, project leaders, and communication professionals within municipalities, ministries, or other government organizations. They work on improving digital services and must comply with the Digital Government Act (WCAG) guidelines.</p>
+      
+      <h4>Research Methods</h4>
+      <p><strong>Literature research:</strong> I researched existing information about digital accessibility, the Digital Government Act, and WCAG guidelines. I also analyzed Cardan's website to understand their approach to digital accessibility.</p>
+      
+      <p><strong>Case study analysis:</strong> To understand how Cardan applies digital accessibility in practice, I analyzed their website and other digital platforms, evaluating their compliance with accessibility standards like WCAG guidelines.</p>
+      
+
+      <h3>WHY THIS RESEARCH?</h3>
+      <p>This research was based on three main questions:</p>
+   <ol>
+  <li>What is already happening in the field of digital accessibility?</li>
+  <li>What problems do people with visual impairments face online?</li>
+  <li>Who is the target audience and what do they need?</li>
+    </ol>
+
+    <h3>CASE STUDY: CARDAN'S WEBSITE</h3>
+<p>To see how digital accessibility is used in real life, I also looked at Cardan's website. I checked how well it follows the WCAG rules. This helped me understand what they are doing well and where they could improve. It gave me ideas about how these guidelines work in practice.</p>
+
+      <h3>CONCLUSION</h3>
+      <p>The research revealed a significant gap between legal requirements and actual implementation of digital accessibility. With only 23% of government websites meeting basic accessibility standards, there's a clear need for better tools, training, and support systems for government professionals responsible for digital accessibility compliance.</p>
+      
+      <p>Understanding the specific challenges faced by visually impaired users provided crucial insights for developing more effective accessibility solutions that go beyond mere compliance to create truly inclusive digital experiences.</p>
+    </div>
+  </div>
+
+  <!-- Wireframe Details Window -->
+  <div class="wireframe-details-window" style="display: none;">
+    <div class="window-header">
+      <div class="window-title">WIREFRAME PROCESS</div>
+      <div class="window-close">✕</div>
+    </div>
+    <div class="window-content">
+      <div class="wireframe-process-header">
+        <h1>WIREFRAMING & PROTOTYPING PROCESS</h1>
+      </div>
+      
+      <p>This section shows the complete wireframing and prototyping process for creating accessible government websites. Each stage built upon accessibility principles to ensure the final design would work effectively for users with visual impairments.</p>
+      
+      <div class="wireframe-stage">
+        <h3>STAGE 1: LOW-FIDELITY WIREFRAMES</h3>
+        <div class="stage-images">
+          <img src="imgs/wireframe_lowfi_1.png" alt="Low-fidelity wireframe 1" class="clickable-image">
+          <img src="imgs/wireframe_lowfi_2.png" alt="Low-fidelity wireframe 2" class="clickable-image">
+        </div>
+        <p>I started with basic wireframes focusing on information architecture and content hierarchy. These early sketches established the foundation for accessible navigation patterns and ensured logical content flow that would work well with screen readers. The wireframes prioritized clear section divisions and consistent layout patterns.</p>
       </div>
 
-      <div class="image-popup-overlay" id="imagePopup">
-        <div class="image-popup-content">
-          <div class="image-popup-close" id="closePopup">✕</div>
-          <img id="popupImage" src="" alt="Enlarged view">
+      <div class="wireframe-stage">
+        <h3>STAGE 2: ACCESSIBILITY-FOCUSED WIREFRAMES</h3>
+        <div class="stage-images">
+          <img src="imgs/wireframe_accessible_1.png" alt="Accessibility wireframe 1" class="clickable-image">
+          <img src="imgs/wireframe_accessible_2.png" alt="Accessibility wireframe 2" class="clickable-image">
         </div>
+        <p>The next iteration specifically addressed accessibility requirements. I incorporated proper heading hierarchies, skip navigation links, and clear focus indicators. These wireframes showed how form elements would be labeled, how images would be described, and how interactive elements would provide feedback to assistive technologies.</p>
       </div>
+
+      <div class="wireframe-stage">
+        <h3>STAGE 3: HIGH-FIDELITY PROTOTYPES</h3>
+        <div class="stage-images">
+          <img src="imgs/prototype_highfi_1.png" alt="High-fidelity prototype 1" class="clickable-image">
+          <img src="imgs/prototype_highfi_2.png" alt="High-fidelity prototype 2" class="clickable-image">
+        </div>
+        <p>The high-fidelity prototypes brought together visual design with accessibility features. I implemented proper color contrast ratios, scalable typography, and interactive states that meet WCAG guidelines. These prototypes demonstrated how the interface would look and function while maintaining full accessibility compliance.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Popup -->
+  <div class="image-popup-overlay" id="imagePopup">
+    <div class="image-popup-content">
+      <div class="image-popup-close" id="closePopup">✕</div>
+      <img id="popupImage" src="" alt="Enlarged view">
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
