@@ -44,19 +44,21 @@ const LearningOutcomes = {
   },
 
   loadLearningOutcome: function(outcomeKey) {
-    const outcome = learningOutcomeData[outcomeKey];
-    if (outcome) {
-      const learningOutcomeTypeElement = document.getElementById('learning-outcome-type');
-      const learningOutcomeContentElement = document.getElementById('learning-outcome-content');
+  const outcome = learningOutcomeData[outcomeKey];
+  if (outcome) {
+    const learningOutcomeTypeElement = document.getElementById('learning-outcome-type');
+    const learningOutcomeContentElement = document.getElementById('learning-outcome-content');
+    
+    if (learningOutcomeTypeElement) learningOutcomeTypeElement.textContent = outcome.type;
+    if (learningOutcomeContentElement) {
+      learningOutcomeContentElement.innerHTML = outcome.content;
       
-      if (learningOutcomeTypeElement) learningOutcomeTypeElement.textContent = outcome.type;
-      if (learningOutcomeContentElement) {
-        learningOutcomeContentElement.innerHTML = outcome.content;
-        // Re-attach only non-evidence button listeners after new HTML is injected
-        this.attachOtherButtonListeners();
-      }
+      learningOutcomeContentElement.scrollTop = 0;
+      
+      this.attachOtherButtonListeners();
     }
-  },
+  }
+},
 
   attachOtherButtonListeners: function() {
     // Feedback PDF buttons

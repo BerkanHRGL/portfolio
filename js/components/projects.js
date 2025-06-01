@@ -17,22 +17,25 @@ const Projects = {
     });
   },
 
-  loadProject: function(projectKey) {
-    const project = projectData[projectKey];
-    if (project) {
-      const projectTypeElement = document.getElementById('project-type');
-      const projectClientElement = document.getElementById('project-client');
-      const projectContentElement = document.getElementById('project-content');
+loadProject: function(projectKey) {
+  const project = projectData[projectKey];
+  if (project) {
+    const projectTypeElement = document.getElementById('project-type');
+    const projectClientElement = document.getElementById('project-client');
+    
+    if (projectTypeElement) projectTypeElement.textContent = project.type;
+    if (projectClientElement) projectClientElement.textContent = project.client;
+    
+    const projectContentElement = document.getElementById('project-content');
+    if (projectContentElement) {
+      projectContentElement.innerHTML = project.content;
       
-      if (projectTypeElement) projectTypeElement.textContent = project.type;
-      if (projectClientElement) projectClientElement.textContent = project.client || '';
-      if (projectContentElement) {
-        projectContentElement.innerHTML = project.content;
-        // Re-attach event listeners for buttons that might have been added
-        this.attachProjectEventListeners();
-      }
+      projectContentElement.scrollTop = 0;
+      
+      this.attachProjectEventListeners();
     }
-  },
+  }
+},
 
   attachProjectEventListeners: function() {
     // Interview details button (for branding project)
