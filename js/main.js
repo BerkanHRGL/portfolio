@@ -672,3 +672,44 @@ document.addEventListener('DOMContentLoaded', () => {
     ELEMENTS.confirmButton.addEventListener('click', goToMainContent);
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cdPlayer = document.getElementById('cd-player');
+  const cdDisc = document.getElementById('cd-disc');
+  
+  let isPlaying = false;
+  let currentSongIndex = 0;
+  
+  const songs = [
+    { src: 'sounds/gorillaz.mp3', title: 'Song 1' }
+  ];
+  
+  let audio = new Audio(songs[currentSongIndex].src);
+  audio.loop = true;
+  audio.volume = 0.3;
+  
+  cdPlayer.addEventListener('click', () => {
+    if (!isPlaying) {
+      // Start playing
+      cdDisc.classList.add('spinning');
+      audio.play();
+      isPlaying = true;
+    } else {
+      // Pause
+      cdDisc.classList.remove('spinning');
+      audio.pause();
+      isPlaying = false;
+    }
+  });
+  
+  cdPlayer.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    audio.src = songs[currentSongIndex].src;
+    
+    if (isPlaying) {
+      audio.play();
+    }
+  });
+});

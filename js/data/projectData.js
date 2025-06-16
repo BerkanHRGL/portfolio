@@ -415,7 +415,7 @@ const projectData = {
     type: "Portfolio",
     content: `
     <h2>PROJECT OVERVIEW</h2>
-    <p>This portfolio website development project involved creating a personal digital showcase to present my work as a media design student. The project demonstrates my skills in front-end development, UX/UI design, and creative coding while providing an interactive platform to display my projects and achievements.</p>    
+    <p>This portfolio website development project involved creating a personal digital showcase to present my work as a student. The project demonstrates my skills in front-end development, UX/UI design, and creative coding while providing an interactive platform to display my projects and achievements.</p>    
     <div class="project-info-row">
       <div class="tools-section">
         <h2>TOOLS USED</h2>
@@ -432,7 +432,7 @@ const projectData = {
       
       <div class="date-section">
         <h3>DATE</h3>
-        <p>April 2025 - May 2025</p>
+        <p>February 2025 - June 2025</p>
       </div>
     </div>
 
