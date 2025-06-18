@@ -155,7 +155,7 @@
 .persona-section,
 .design-process-section,
 .presenting-section {
-  margin-top: 400px; 
+  margin-top: 40px; 
   margin-bottom: 400px; 
 }
 
@@ -824,5 +824,4 @@
 
 .user-testing-section {
     margin-top: 400px; /* Increase this value */
-    /* or try margin-top: 80px; for even more space */
 }

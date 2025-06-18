@@ -79,9 +79,12 @@ function setupNavigation() {
             WindowManager.openWindow(fullAboutWindow, true);
           }
           break;
-        case 'contact':
-          // Implement contact functionality
-          break;
+case 'contact':
+  const contactWindow = document.querySelector('.contact-window');
+  if (contactWindow) {
+    WindowManager.openWindow(contactWindow, true);
+  }
+  break;
       }
     });
   });
@@ -98,36 +101,247 @@ function loadWindowTemplates() {
         <div class="window-close">✕</div>
       </div>
       <div class="window-content">
-        <p>HEY, I'M BERKAN, A MEDIA DESIGN STUDENT BASED IN THE NETHERLANDS WHO LOVES BLENDING CREATIVITY WITH PURPOSE. I'M ALL ABOUT CRAFTING DESIGNS THAT NOT ONLY LOOK GOOD BUT ALSO FEEL RIGHT TO USE.</p>
+        <p>HEY, I'M BERKAN! I'M A MEDIA DESIGN STUDENT FROM THE NETHERLANDS AND I REALLY ENJOY MAKING CREATIVE PROJECTS THAT ACTUALLY MEAN SOMETHING. FOR ME IT'S ALL ABOUT MAKING SURE SOMETHING DOESN'T JUST LOOK NICE, BUT ALSO WORKS WELL FOR THE PEOPLE WHO USE IT.</p></p>
       </div>
       <div class="window-footer">
         <div class="about-button">MORE ABOUT ME</div>
       </div>
     </div>
 
-    <div class="full-about-me-window" style="display: none;">
-      <div class="window-header">
-        <div class="window-title">ABOUT ME</div>
-        <div class="window-close">✕</div>
-      </div>
-      <div class="window-content">
-        <div class="about-header">
-          <h1>BERKAN<br>HERGUL</h1>
-          <h2>ABOUT ME</h2>
+<div class="full-about-me-window" style="display: none;">
+  <div class="window-header">
+    <div class="window-title">ABOUT ME</div>
+    <div class="window-close">✕</div>
+  </div>
+  <div class="window-content">
+    
+    <!-- Profile Header Section -->
+    <div class="profile-header">
+      <div class="profile-picture-section">
+        <div class="profile-picture-frame">
+          <img src="imgs/portrait.png" alt="Berkan Hergul" class="profile-picture">
         </div>
-        <p>HEY, I'M BERKAN, A MEDIA DESIGN STUDENT BASED IN THE NETHERLANDS WHO LOVES BLENDING CREATIVITY WITH PURPOSE. I'M ALL ABOUT CRAFTING DESIGNS THAT NOT ONLY LOOK GOOD BUT ALSO FEEL RIGHT TO USE.</p>
-        <p>As a passionate media designer, I've been developing my skills in UX/UI, front-end development, and visual design. My approach combines technical precision with creative vision, always aiming to create intuitive and engaging user experiences.</p>
-        <p>Education: Currently pursuing a degree in Media Design at Fontys University of Applied Sciences, where I'm developing both my technical and creative abilities.</p>
-        <p>Skills:</p>
-        <ul>
-          <li>UX/UI Design</li>
-          <li>Front-End Development (HTML, CSS, JavaScript)</li>
-          <li>Visual Design</li>
-          <li>Prototyping</li>
-          <li>User Research</li>
-        </ul>
+        <div class="online-status">● ONLINE</div>
+      </div>
+      
+      <div class="profile-info">
+        <h1 class="profile-name">BERKAN HERGUL</h1>
+        <div class="profile-title">MEDIA DESIGN STUDENT</div>
       </div>
     </div>
+
+    <!-- Stats Section -->
+    <div class="profile-stats">
+      <div class="stat-item">
+        <div class="stat-label">AGE</div>
+        <div class="stat-value">21</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">LOCATION</div>
+        <div class="stat-value">NETHERLANDS</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">EDUCATION</div>
+        <div class="stat-value">FONTYS UNIVERSITY</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">STATUS</div>
+        <div class="stat-value">STUDENT</div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+<div class="about-section">
+  <h2 class="section-title">ABOUT</h2>
+  <p>Hey, I'm Berkan! I'm a Media Design student from the Netherlands and I love making things that not only look good, but actually work well for people too.</p>
+  
+  <p>At Fontys I'm learning everything about UX/UI design, front-end development and visual design. What I enjoy most is combining my creativity with technical skills to create projects that actually help people.</p>
+
+  <p>Through my projects I've learned that good design starts with good research. I like talking to real users to understand what they need, and use those insights to make better designs.</p>
+</div>
+
+    <!-- Skills Section -->
+    <div class="skills-section">
+      <h2 class="section-title">SKILLS & TOOLS</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>DESIGN</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">FIGMA</span>
+            <span class="skill-tag">PHOTOSHOP</span>
+            <span class="skill-tag">ILLUSTRATOR</span>
+            <span class="skill-tag">UI/UX DESIGN</span>
+            <span class="skill-tag">PROTOTYPING</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>DEVELOPMENT</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JAVASCRIPT</span>
+            <span class="skill-tag">VS CODE</span>
+            <span class="skill-tag">GIT</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>RESEARCH</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">USER RESEARCH</span>
+            <span class="skill-tag">A/B TESTING</span>
+            <span class="skill-tag">INTERVIEWS</span>
+            <span class="skill-tag">ACCESSIBILITY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Currently Working On -->
+    <div class="current-work-section">
+      <h2 class="section-title">CURRENTLY WORKING ON</h2>
+      <div class="work-item">
+        <div class="work-title">📱 PROJECT X</div>
+        <div class="work-description">Building an innovative media project using modern web technologies</div>
+      </div>
+      <div class="work-item">
+        <div class="work-title">🎓 PORTFOLIO</div>
+        <div class="work-description">Showcasing my journey as a media design student</div>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-section">
+      <h2 class="section-title">GET IN TOUCH</h2>
+      <div class="contact-info">
+        <div class="contact-item">📧 AVAILABLE FOR OPPORTUNITIES</div>
+        <div class="contact-item">🌐 BASED IN THE NETHERLANDS</div>
+        <div class="contact-item">💼 OPEN TO INTERNSHIPS & PROJECTS</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Contact Window -->
+<div class="contact-window" style="display: none;">
+  <div class="window-header">
+    <div class="window-title">CONTACT</div>
+    <div class="window-close">✕</div>
+  </div>
+  <div class="window-content">
+    
+    <!-- Contact Header -->
+    <div class="contact-header">
+      <div class="contact-picture-section">
+        <div class="contact-picture-frame">
+          <img src="imgs/portrait.png" alt="Berkan Hergul" class="contact-picture">
+        </div>
+        <div class="availability-status">● AVAILABLE</div>
+      </div>
+      
+      <div class="contact-info-header">
+        <h1 class="contact-name">LET'S CONNECT!</h1>
+        <div class="contact-subtitle">ALWAYS OPEN FOR NEW OPPORTUNITIES</div>
+      </div>
+    </div>
+
+    <!-- Contact Stats -->
+    <div class="contact-stats">
+      <div class="contact-stat-item">
+        <div class="contact-stat-label">RESPONSE TIME</div>
+        <div class="contact-stat-value">24H</div>
+      </div>
+      <div class="contact-stat-item">
+        <div class="contact-stat-label">AVAILABILITY</div>
+        <div class="contact-stat-value">OPEN</div>
+      </div>
+      <div class="contact-stat-item">
+        <div class="contact-stat-label">LOCATION</div>
+        <div class="contact-stat-value">NL</div>
+      </div>
+      <div class="contact-stat-item">
+        <div class="contact-stat-label">TIME ZONE</div>
+        <div class="contact-stat-value">CET</div>
+      </div>
+    </div>
+
+    <!-- About Contact -->
+    <div class="contact-about-section">
+      <h2 class="contact-section-title">WHY GET IN TOUCH?</h2>
+      <p>I'm always interested in new projects or internships, whether you have a question about my work, want to give feedback, or maybe collaborate on something cool, feel free to send me a message!</p>
+
+      <p>I usually respond within 24 hours and I'm always open to new opportunities to learn and grow in the media design world.</p>
+    </div>
+
+    <!-- Contact Methods -->
+    <div class="contact-methods-section">
+      <h2 class="contact-section-title">HOW TO REACH ME?</h2>
+      
+      <div class="contact-method">
+        <div class="method-info">
+          <div class="method-title">EMAIL</div>
+          <div class="method-description">BEST WAY FOR BUSINESS INQUIRIES</div>
+          <div class="method-action">berkanhergul@hotmail.com</div>
+        </div>
+      </div>
+
+      <div class="contact-method">
+        <div class="method-info">
+          <div class="method-title">LINKEDIN</div>
+          <div class="method-description">FOR PROFESSIONAL NETWORKING</div>
+          <div class="method-action">https://www.linkedin.com/in/berkan-hergul-9a54481b8/</div>
+        </div>
+      </div>
+
+      <div class="contact-method">
+        <div class="method-info">
+          <div class="method-title">GITHUB</div>
+          <div class="method-description">CHECK OUT MY CODE AND PROJECTS</div>
+          <div class="method-action">https://github.com/BerkanHRGL</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What I'm Looking For -->
+    <div class="looking-for-section">
+      <h2 class="contact-section-title">WHAT AM I LOOKING FOR?</h2>
+      <div class="opportunity-grid">
+        <div class="opportunity-item">
+          <div class="opportunity-title">INTERNSHIP OPPORTUNITIES</div>
+          <div class="opportunity-description">Looking for a cool internship where I can learn and contribute</div>
+        </div>
+        <div class="opportunity-item">
+          <div class="opportunity-title">FREELANCE PROJECTS</div>
+          <div class="opportunity-description">Small projects where I can put my skills to good use</div>
+        </div>
+        <div class="opportunity-item">
+          <div class="opportunity-title">COLLABORATION</div>
+          <div class="opportunity-description">Always open for creative collaborations with other designers</div>
+        </div>
+        <div class="opportunity-item">
+          <div class="opportunity-title">FEEDBACK</div>
+          <div class="opportunity-description">Constructive feedback on my work is always welcome</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="contact-cta-section">
+      <h2 class="contact-section-title">LET'S MAKE SOMETHING COOL!</h2>
+      <div class="cta-content">
+       <p>Got a cool project, internship opportunity, or just want to chat about design? Send me a message! I love new challenges and I'm always ready to learn something new.</p>
+        <div class="cta-button-container">
+          <button class="cta-button" onclick="window.location.href='mailto:berkan@example.com'">
+            SEND AN EMAIL
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
     <!-- Projects Window -->
     <div class="projects-window" style="display: none;">

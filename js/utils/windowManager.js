@@ -4,7 +4,7 @@ const WindowManager = {
   
   initialize: function() {
     // Get all windows
-    this.windows = document.querySelectorAll('.about-me-window, .projects-window, .learning-outcomes-window, .full-about-me-window, .logo-iterations-window, .interview-details-window, .content-strategy-window, .research-details-window, .wireframe-details-window');
+    this.windows = document.querySelectorAll('.about-me-window, .projects-window, .learning-outcomes-window, .full-about-me-window, .logo-iterations-window, .interview-details-window, .content-strategy-window, .research-details-window, .wireframe-details-window, .contact-window');
     
     // Set up close buttons for all windows - use event delegation
     document.addEventListener('click', (e) => {
@@ -12,7 +12,7 @@ const WindowManager = {
         e.stopPropagation();
         e.preventDefault();
         const windowElement = e.target.closest(
-          '.about-me-window, .projects-window, .learning-outcomes-window, .full-about-me-window, ' +
+          '.about-me-window, .projects-window, .learning-outcomes-window, .full-about-me-window, .contact-window, ' +
           '.logo-iterations-window, .interview-details-window, .content-strategy-window, ' + 
           '.research-details-window, .wireframe-details-window'
         );
