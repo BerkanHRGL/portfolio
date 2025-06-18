@@ -155,7 +155,7 @@
 .persona-section,
 .design-process-section,
 .presenting-section {
-  margin-top: 170px; 
+  margin-top: 400px; 
   margin-bottom: 400px; 
 }
 
@@ -169,7 +169,7 @@
 .research-section h3 {
   font-family: 'PixelOperatorBold', monospace;
   font-size: 28px;
-  margin-top: 200px;
+  margin-top: 400px;
   margin-bottom: 15px;
   color: #fff;
 }
@@ -765,4 +765,64 @@
 #carousel-description {
   font-weight: bold;
   color: #D9D9D9;
+}
+
+/* Character Design Section */
+.character-design-container {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
+  align-items: flex-start;
+}
+
+.character-design-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.character-design-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.character-design-image img:hover {
+  transform: scale(1.02);
+}
+
+.character-design-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.character-design-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .character-design-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .character-design-image {
+    order: 1;
+  }
+  
+  .character-design-text {
+    order: 2;
+  }
+}
+
+.user-testing-section {
+    margin-top: 400px; /* Increase this value */
+    /* or try margin-top: 80px; for even more space */
 }

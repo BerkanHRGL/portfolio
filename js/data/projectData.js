@@ -564,5 +564,116 @@ const projectData = {
   </div>
 </div>
   `
-  }
+  },
+
+  projectx: {
+  type: "App Development",
+  content: `
+    <h2>PROJECT OVERVIEW</h2>
+    <p>Petchi is a goal-tracking web app I developed that combines productivity with emotional connection through a virtual pet companion. The concept is simple but powerful: the better you complete your daily goals, the happier your pet becomes. This gamification approach makes task management more engaging and personally meaningful.</p>
+    
+    <div class="project-info-row">
+      <div class="tools-section">
+        <h2>TOOLS USED</h2>
+        <ul>
+          <li>Visual Studio Code</li>
+          <li>Figma</li>
+          <li>Adobe Illustrator</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>localStorage API</li>
+        </ul>
+      </div>
+      
+      <div class="date-section">
+        <h3>DATE</h3>
+        <p>February 2025 - June 2025</p>
+      </div>
+    </div>
+
+    <div class="research-section">
+      <h2>RESEARCH PROCESS</h2>
+      <p>My research started by exploring existing productivity and pet apps to understand what works and what doesn't. I looked at apps like Habitica, Forest, and various Tamagotchi-style games to see how they create emotional attachment and maintain user engagement.</p>
+      
+      <p>What I found interesting is that most productivity apps either felt too serious and boring, or too gamified and childish. I wanted to find that sweet spot where the pet element feels genuine and the productivity aspect actually helps people build better habits.</p>
+      
+      <h3>FIELD RESEARCH</h3>
+      <p>I conducted field research by observing how people currently manage their daily tasks and goals. I talked to friends and classmates about their productivity struggles and what motivates them to stick with habits.</p>
+      
+      <p>The key insight was that people want immediate positive feedback when they complete tasks, but most apps just show boring checkmarks or numbers. Everyone I talked to had some experience with virtual pets or similar games, and they all remembered feeling genuinely happy when their digital pet was thriving.</p>
+      
+      <p>This research confirmed my idea that combining emotional attachment with productivity could create a more engaging and sustainable approach to goal tracking.</p>
+      
+      <button class="research-details-button">VIEW FULL RESEARCH</button>
+
+      <div class="user-testing-section">
+      <h2>USER TESTING</h2>
+      <p>I conducted user testing with several friends to validate the concept and identify usability issues. The testing focused on the onboarding flow, daily usage patterns, and emotional connection with the pet.</p>
+      
+      <p>Most users immediately understood the concept and found the pet character appealing. The onboarding process worked smoothly, and people enjoyed the personalization aspect of naming both themselves and their pet.</p>
+      
+      <p>The main feedback was about goal management - users wanted completed goals to disappear from the list rather than just being crossed out, which led me to implement the disappearing task feature. People also appreciated the immediate mood feedback when completing or adding goals.</p>
+      
+      <button class="user-testing-button">VIEW FULL USER TEST RESULTS</button>
+          </div>
+
+    </div>
+
+    <div class="design-process-section">
+      <h2>DESIGN PROCESS</h2>
+      <p>I started the design process by sketching different concepts for how the pet and goals would interact. The biggest question was how to make the pet feel alive and responsive without being distracting from the actual productivity aspect.</p>
+
+      <h3>CHARACTER DESIGN</h3>
+      <div class="character-design-container">
+        <div class="character-design-image">
+          <img src="imgs/petchi-character-design.png" alt="Petchi Character Design Process" class="clickable-image">
+          <img src="imgs/petchi-character-design-2.png" alt="Petchi Character Design Process" class="clickable-image">
+
+        </div>
+        <div class="character-design-text">
+          <p>I designed the pet character in Adobe Illustrator, going through several iterations to find the right balance between cute and professional. The character needed to work across different mood states - happy, neutral, and sad - while staying recognizable and appealing.</p>
+          <p>I chose a hamster-like design because it feels friendly and approachable without being too childish. The round, simple shapes also work well at small sizes and are easy to animate with CSS.</p>
+        </div>
+      </div>
+
+<h3>WIREFRAMING AND PROTOTYPING</h3>
+      <div class="carousel-layout">
+        <div class="carousel-left">
+          <div class="image-carousel">
+            <button class="carousel-arrow carousel-prev" id="petchi-carousel-prev">‹</button>
+            <div class="carousel-container">
+              <img id="petchi-carousel-image" src="imgs/petchi-wireframe-1.png" alt="Petchi Wireframe Step 1" class="clickable-image">
+            </div>
+            <button class="carousel-arrow carousel-next" id="petchi-carousel-next">›</button>
+          </div>
+          <div class="carousel-counter">
+            <span id="petchi-current-image">1</span> / <span id="petchi-total-images">5</span>
+          </div>
+        </div>
+        
+        <div class="carousel-right">
+          <p>This shows my complete wireframing and prototyping process for Petchi, from initial sketches to polished Figma designs. Each step helped me refine the user flow and create a more intuitive experience.</p>
+          
+          <p>The process included initial concept sketches, low-fidelity wireframes, user flow mapping, high-fidelity prototypes, and final design iterations. Each image represents a different stage that brought the app from idea to reality.</p>
+        </div>
+      </div>
+
+    <div class="development-section">
+  <h2>DEVELOPMENT</h2>
+  <p>Building Petchi was the most challenging coding project I've done so far. I used HTML, CSS, and JavaScript to create the interactive pet experience and goal tracking system. The trickiest part was getting the localStorage to work properly and making sure the pet's mood updates felt natural and immediate.</p>
+  
+  <p>I learned a lot about mobile-first design and making sure the app works perfectly on phones. Getting the touch interactions right and preventing weird zoom behaviors took some trial and error. I also implemented PWA features so users can install Petchi on their home screen like a real app.</p>
+  
+  <p>The pet mood system was probably the most fun to code. I had to calculate completion percentages and smoothly transition between different pet expressions. Making the pet feel alive and responsive to user actions was really satisfying when I finally got it working.</p>
+</div>
+
+    <div class="live-demo-section">
+      <h2>LIVE DEMO</h2>
+      <p>Petchi is currently deployed and fully functional. You can try the complete app experience including pet naming, goal creation, and mood tracking. The app works best on mobile devices and can be installed to your home screen for the full app experience.</p>
+      
+      <button class="live-demo-button">TRY PETCHI LIVE</button>
+    </div>
+  `
+}
 };

@@ -84,7 +84,9 @@
 .evidence-button,
 .feedback-pdf-button,
 .dashboard-link-button,
-.version-control-button {
+.version-control-button,
+.user-testing-button,
+.live-demo-button {
   background-color: #D9D9D9;
   color: #000;
   padding: 12px 20px;
