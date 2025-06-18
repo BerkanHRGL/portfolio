@@ -977,7 +977,7 @@ function createFallingLeaf() {
   leaf.style.top = '-100px';
   leaf.style.zIndex = '9999';
   
-  leaf.style.backgroundImage = "url('/imgs/maple-leaf.png')";
+  leaf.style.backgroundImage = "url('imgs/maple-leaf.png')";
   leaf.style.backgroundSize = 'contain';
   leaf.style.backgroundRepeat = 'no-repeat';
   leaf.style.backgroundPosition = 'center';
