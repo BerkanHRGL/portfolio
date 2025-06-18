@@ -631,7 +631,7 @@ const projectData = {
 
         </div>
         <div class="character-design-text">
-          <p>I designed the pet character in Adobe Illustrator, going through several iterations to find the right balance between cute and professional. The character needed to work across different mood states - happy, neutral, and sad - while staying recognizable and appealing.</p>
+          <p>I designed the pet character in Adobe Illustrator, going through several iterations to find the right balance between cute and professional. The character needed to work across different mood states: happy, neutral, and sad while staying recognizable and appealing.</p>
           <p>I chose a hamster-like design because it feels friendly and approachable without being too childish. The round, simple shapes also work well at small sizes and are easy to animate with CSS.</p>
         </div>
       </div>

@@ -40,6 +40,12 @@ const learningOutcomeData = {
   <p>I took this feedback seriously and created the interactive fashion game where users make outfits while experiencing visual impairments. This shows that I can change my designs based on what stakeholders need.</p>
   <button class="evidence-button" data-project="ux" data-section="presenting">VIEW STAKEHOLDER FEEDBACK</button>
   </div>
+  <div class="evidence-item">
+  <h4>Petchi App: Creating Emotional Connection Through Interaction</h4>
+  <p>My biggest interactive media project was building Petchi, a goal-tracking app that combines productivity with emotional connection through a virtual pet. The whole concept was about making task management more engaging by creating a real emotional bond between users and their digital pet.</p>
+  <p>What made this interactive was testing different ways to make the pet feel alive and responsive. I user tested several friends to see if they actually cared about their pet's happiness when completing goals. The feedback was really good, people immediately understood the concept and found the pet character appealing. The main insight was that users wanted completed goals to disappear rather than just being crossed out, which I implemented right away.</p>
+  <button class="evidence-button" data-project="projectx" data-section="user-testing">VIEW PETCHI USER TESTING</button>
+  </div>
 </div>
 <div class="learning-outcome-conclusion">
   <h3>CONCLUSION</h3>
@@ -87,10 +93,16 @@ const learningOutcomeData = {
   <p>Besides my main projects, I also work on extra development challenges from workshops. You can see these on my dashboard where I try out new coding ideas and techniques.</p>
   <button class="dashboard-link-button" data-project="development" data-section="development">VIEW DASHBOARD</button>
   </div>
+  <div class="evidence-item">
+  <h4>Building Petchi: Full-Stack Goal Tracking App</h4>
+  <p>Petchi was my most challenging development project so far. I built a complete goal-tracking web app using HTML, CSS, and JavaScript where users can create goals and watch their virtual pet's mood change based on their completion rate. The trickiest part was getting the localStorage to work properly and making sure the pet's mood updates felt natural and immediate.</p>
+  <p>I learned a lot about mobile-first design during this project. Getting the touch interactions right and preventing weird zoom behaviors took some time to figure out. I also implemented PWA features so users can install Petchi on their home screen like a real app. The pet mood system was probably the most fun to code - I had to calculate completion percentages and smoothly transition between different pet expressions.</p>
+  <button class="evidence-button" data-project="projectx" data-section="development">VIEW PETCHI DEVELOPMENT</button>
+  </div>
 </div>
 <div class="learning-outcome-conclusion">
   <h3>CONCLUSION</h3>
-  <p>My development work has grown from basic HTML and CSS to building interactive applications. I try to understand what I am building instead of just making things work. Using version control has become normal for me - I use it to track my work, work with others, and keep my code organized so other people can understand it too.</p>
+  <p>My development work has grown from basic HTML and CSS to building interactive applications. I try to understand what I am building instead of just making things work. Using version control has become normal for me, I use it to track my work, work with others, and keep my code organized so other people can understand it too.</p>
 <p>I still need to work on writing better tests for my code and improving my debugging skills. Sometimes I spend too much time on small details instead of focusing on the bigger picture.</p>
 
 </div>
@@ -142,6 +154,13 @@ const learningOutcomeData = {
     <p>I've learned that good design starts with good research. For every project, I spend time understanding the target audience, analyzing competitors, and creating mood boards that capture the right feeling before I start designing.</p>
     <p>The Boris Schmidt project is a perfect example - I interviewed techno fans, researched the music scene, and created detailed personas before designing anything. This research foundation made all the difference in creating a brand that actually resonated with the target audience.</p>
     <button class="evidence-button" data-project="branding" data-section="research">VIEW RESEARCH PROCESS</button>
+  </div>
+  
+  <div class="evidence-item">
+    <h4>Petchi Character Design and Visual Identity</h4>
+    <p>When I was creating Petchi, I wanted the character to feel friendly and approachable without being too childish. I designed the pet character in Adobe Illustrator, going through several iterations to find the right balance. The character needed to work across different mood states: happy, neutral, and sad, while staying recognizable and appealing.</p>
+    <p>I chose a hamster-like design because it feels friendly and the round, simple shapes work well at small sizes and are easy to animate with CSS. I went through multiple concepts before finding the right style that worked both functionally and emotionally. The iterative process really helped me understand how small design changes can have a big impact on user connection.</p>
+    <button class="evidence-button" data-project="projectx" data-section="character-design">VIEW CHARACTER DESIGN PROCESS</button>
   </div>
 </div>
 
@@ -200,6 +219,13 @@ const learningOutcomeData = {
     <p>When working in teams, I contribute to project planning and make sure everyone understands the timeline and their role in meeting deadlines. I've learned that good project organization is what separates professional work from student work.</p>
     <button class="evidence-button" data-project="development" data-section="project-plan">VIEW PROJECT PLANNING</button>
   </div>
+  
+  <div class="evidence-item">
+    <h4>Petchi App: Complete Project Documentation and Research</h4>
+    <p>When I was developing Petchi, I made sure to document everything properly from the beginning. I started with comprehensive research about existing productivity and pet apps, analyzing competitors like Habitica, Forest, and Tamagotchi-style games to understand what works and what doesn't. I documented this field research thoroughly, identifying the gap between emotionally engaging apps and genuinely productive ones.</p>
+    <p>I also conducted proper user testing with several friends, documenting their feedback. Most users immediately understood the concept and found the pet character appealing, but the main insight was that users wanted completed goals to disappear rather than just being crossed out. I implemented this feedback professionally and documented the changes, showing how user research directly influenced the final product.</p>
+    <button class="evidence-button" data-project="projectx" data-section="research">VIEW PETCHI RESEARCH PROCESS</button>
+  </div>
 </div>
 
 <div class="learning-outcome-conclusion">
@@ -253,10 +279,17 @@ const learningOutcomeData = {
     <button class="evidence-button" data-project="branding" data-section="presentation">VIEW TASK LEADERSHIP</button>
   </div>
 
+  <div class="evidence-item">
+    <h4>Self-Directed Learning and Initiative with Petchi</h4>
+    <p>Petchi was completely my own initiative, I saw a gap in the market between emotionally engaging apps and genuinely productive ones, and I decided to build something to fill that gap. I took the lead on everything from initial concept development to final implementation, making sure to document my learning process throughout.</p>
+    <p>When I encountered problems I didn't know how to solve, like getting localStorage to work properly or implementing PWA features, I took initiative to research and learn these technologies on my own. I didn't wait for someone to teach me, I found resources, tested different approaches, and figured out what worked. This project really showed me that I can drive my own learning when I'm passionate about something.</p>
+    <button class="evidence-button" data-project="projectx" data-section="development">VIEW SELF-DIRECTED LEARNING</button>
+  </div>
+
 <div class="learning-outcome-conclusion">
   <h3>CONCLUSION</h3>
   <p>Personal leadership, for me, has been about taking ownership of my learning journey and staying true to my values while continuously growing. I consistently take initiative in asking for feedback, documenting work, and taking on important responsibilities in both individual and group projects.</p>
-  <p>I've learned that processing feedback immediately and reflecting on it properly is what leads to real improvement. Whether it's through Feedpulse reflections, user testing, or client feedback sessions, I make sure to act on input quickly and document the changes..</p>
+  <p>I've learned that processing feedback immediately and reflecting on it properly is what leads to real improvement. Whether it's through Feedpulse reflections, user testing, or client feedback sessions, I make sure to act on input quickly and document the changes.</p>
 </div>
     `
   }

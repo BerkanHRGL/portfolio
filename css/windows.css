@@ -267,7 +267,9 @@
   overflow-y: auto;
   overflow-x: hidden;
   padding: 20px;
+  padding-bottom: 60px;
   height: 100%;
+  max-height: calc(100vh - 150px);
 }
 
 /* Contact Window Specific Styles */

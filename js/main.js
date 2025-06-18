@@ -263,7 +263,7 @@ function loadWindowTemplates() {
       </div>
       <div class="contact-stat-item">
         <div class="contact-stat-label">TIME ZONE</div>
-        <div class="contact-stat-value">CET</div>
+        <div class="contact-stat-value">GMT+2</div>
       </div>
     </div>
 
