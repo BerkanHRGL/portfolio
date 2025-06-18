@@ -927,3 +927,125 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+function updateDateTime() {
+  const now = new Date();
+  
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  
+  const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+  const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 
+                  'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  
+  const dayName = days[now.getDay()];
+  const day = now.getDate();
+  const monthName = months[now.getMonth()];
+  const year = now.getFullYear();
+  
+  const dateString = `${dayName}, ${day} ${monthName} ${year}`;
+  
+  const timeDisplay = document.getElementById('time-display');
+  const dateDisplay = document.getElementById('date-display');
+  
+  if (timeDisplay) timeDisplay.textContent = timeString;
+  if (dateDisplay) dateDisplay.textContent = dateString;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  updateDateTime();
+  
+  setInterval(updateDateTime, 1000);
+});
+
+function createFallingLeaf() {
+  console.log('Creating falling leaf...');
+  
+  const leaf = document.createElement('div');
+  leaf.className = 'falling-leaf';
+  
+  const sizes = ['small', 'medium', 'large'];
+  const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+  leaf.classList.add(randomSize);
+  
+  // Set explicit position and style
+  const leftPosition = Math.random() * 90; // Keep some margin
+  leaf.style.position = 'absolute';
+  leaf.style.left = leftPosition + 'vw';
+  leaf.style.top = '-100px';
+  leaf.style.zIndex = '9999';
+  
+  leaf.style.backgroundImage = "url('/imgs/maple-leaf.png')";
+  leaf.style.backgroundSize = 'contain';
+  leaf.style.backgroundRepeat = 'no-repeat';
+  leaf.style.backgroundPosition = 'center';
+  
+  const fallDuration = Math.random() * 3 + 4; // 4-7 seconds
+  
+  // Apply CSS animation
+  leaf.style.animationDuration = fallDuration + 's';
+  leaf.style.animationName = 'fall';
+  leaf.style.animationTimingFunction = 'linear';
+  leaf.style.animationFillMode = 'forwards';
+  
+  console.log('Leaf created at:', leftPosition + 'vw', 'duration:', fallDuration + 's');
+  
+  const container = document.getElementById('falling-leaves-container');
+  
+  if (container) {
+    container.appendChild(leaf);
+    console.log('Leaf added and should be visible');
+    
+    // Debug: log the leaf element
+    console.log('Leaf element:', leaf);
+    console.log('Leaf styles:', {
+      position: leaf.style.position,
+      left: leaf.style.left,
+      top: leaf.style.top,
+      animation: leaf.style.animation
+    });
+    
+  } else {
+    console.error('Container not found');
+  }
+  
+  // Remove leaf after animation
+  setTimeout(() => {
+    if (leaf.parentNode) {
+      leaf.parentNode.removeChild(leaf);
+      console.log('🍂 Leaf removed');
+    }
+  }, fallDuration * 1000 + 1000);
+}
+
+function startLeafFall() {
+  console.log('Starting leaf fall animation...');
+  
+  const leafCount = 30;
+  const interval = 150;
+  
+  for (let i = 0; i < leafCount; i++) {
+    setTimeout(() => {
+      console.log('Creating leaf', i + 1);
+      createFallingLeaf();
+    }, i * interval);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const mapleIcon = document.getElementById('maple-icon');
+  
+  if (mapleIcon) {
+    mapleIcon.addEventListener('click', function() {
+      console.log('Maple leaf clicked! Starting leaf fall animation...');
+      startLeafFall();
+      
+      this.style.transform = 'scale(0.9)';
+      setTimeout(() => {
+        this.style.transform = 'scale(1)';
+      }, 100);
+    });
+  }
+});

@@ -166,7 +166,7 @@ const projectData = {
         
         <div class="date-section">
           <h3>DATE</h3>
-          <p>March 2025 - April 2024</p>
+          <p>March 2025 - April 2025</p>
         </div>
       </div>
 
