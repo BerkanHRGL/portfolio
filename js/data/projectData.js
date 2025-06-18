@@ -567,10 +567,10 @@ const projectData = {
   },
 
   projectx: {
-  type: "App Development",
+  type: "PETCHI",
   content: `
     <h2>PROJECT OVERVIEW</h2>
-    <p>Petchi is a goal-tracking web app I developed that combines productivity with emotional connection through a virtual pet companion. The concept is simple but powerful: the better you complete your daily goals, the happier your pet becomes. This gamification approach makes task management more engaging and personally meaningful.</p>
+    <p>Petchi is a goal-tracking web app I developed that combines productivity with emotional connection through a virtual pet. The concept is simple but powerful, the better you complete your daily goals, the happier your pet becomes. This approach makes task management more engaging and personally meaningful.</p>
     
     <div class="project-info-row">
       <div class="tools-section">
@@ -582,7 +582,6 @@ const projectData = {
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
-          <li>localStorage API</li>
         </ul>
       </div>
       
@@ -596,24 +595,24 @@ const projectData = {
       <h2>RESEARCH PROCESS</h2>
       <p>My research started by exploring existing productivity and pet apps to understand what works and what doesn't. I looked at apps like Habitica, Forest, and various Tamagotchi-style games to see how they create emotional attachment and maintain user engagement.</p>
       
-      <p>What I found interesting is that most productivity apps either felt too serious and boring, or too gamified and childish. I wanted to find that sweet spot where the pet element feels genuine and the productivity aspect actually helps people build better habits.</p>
+      <p>What I found interesting is that most productivity apps either felt too serious and boring, or too gamified and childish. I wanted to find that sweet spot where the pet feels genuine and the productivity aspect actually helps people build better habits.</p>
       
       <h3>FIELD RESEARCH</h3>
-      <p>I conducted field research by observing how people currently manage their daily tasks and goals. I talked to friends and classmates about their productivity struggles and what motivates them to stick with habits.</p>
+      <p>I analyzed 4 existing productivity apps (Finch, Habitica, Todoist, Apple Reminders) to identify market gaps. While most apps have good interfaces and organization features, they either lack emotional engagement (Todoist, Apple Reminders) or focus too much on gaming rather than actual productivity (Finch, Habitica).</p>
       
-      <p>The key insight was that people want immediate positive feedback when they complete tasks, but most apps just show boring checkmarks or numbers. Everyone I talked to had some experience with virtual pets or similar games, and they all remembered feeling genuinely happy when their digital pet was thriving.</p>
+      <p>This research revealed an opportunity to create a simple goal-tracking app that combines emotional connection through a virtual pet with practical productivity features, where the pet's mood directly reflects real task completion.</p>
       
-      <p>This research confirmed my idea that combining emotional attachment with productivity could create a more engaging and sustainable approach to goal tracking.</p>
+      <p>There's a gap between emotionally engaging apps and genuinely productive ones, my app concept fills this gap by making the pet's happiness directly tied to actual goal completion rather than separate game mechanics.</p>
       
       <button class="research-details-button">VIEW FULL RESEARCH</button>
 
       <div class="user-testing-section">
       <h2>USER TESTING</h2>
-      <p>I conducted user testing with several friends to validate the concept and identify usability issues. The testing focused on the onboarding flow, daily usage patterns, and emotional connection with the pet.</p>
+      <p>I did user testing with several friends to validate the concept and identify usability issues. The testing focused on the onboarding flow, daily usage patterns, and emotional connection with the pet.</p>
       
       <p>Most users immediately understood the concept and found the pet character appealing. The onboarding process worked smoothly, and people enjoyed the personalization aspect of naming both themselves and their pet.</p>
       
-      <p>The main feedback was about goal management - users wanted completed goals to disappear from the list rather than just being crossed out, which led me to implement the disappearing task feature. People also appreciated the immediate mood feedback when completing or adding goals.</p>
+      <p>The main feedback was about goal management, users wanted completed goals to disappear from the list rather than just being crossed out, which led me to implement the disappearing task feature. People also appreciated the immediate mood feedback when completing or adding goals.</p>
       
       <button class="user-testing-button">VIEW FULL USER TEST RESULTS</button>
           </div>
@@ -661,19 +660,30 @@ const projectData = {
 
     <div class="development-section">
   <h2>DEVELOPMENT</h2>
-  <p>Building Petchi was the most challenging coding project I've done so far. I used HTML, CSS, and JavaScript to create the interactive pet experience and goal tracking system. The trickiest part was getting the localStorage to work properly and making sure the pet's mood updates felt natural and immediate.</p>
+  <p>Building Petchi was a challenging coding project. I used HTML, CSS, and JavaScript to create the interactive pet experience and goal tracking system. The trickiest part was getting the localStorage to work properly and making sure the pet's mood updates felt natural and immediate.</p>
   
-  <p>I learned a lot about mobile-first design and making sure the app works perfectly on phones. Getting the touch interactions right and preventing weird zoom behaviors took some trial and error. I also implemented PWA features so users can install Petchi on their home screen like a real app.</p>
+  <p>I learned a lot about mobile-first design and making sure the app works perfectly on phones. Getting the touch interactions right and preventing weird zoom behaviors took some time. I also implemented PWA features so users can install Petchi on their home screen like a real app.</p>
   
   <p>The pet mood system was probably the most fun to code. I had to calculate completion percentages and smoothly transition between different pet expressions. Making the pet feel alive and responsive to user actions was really satisfying when I finally got it working.</p>
 </div>
 
     <div class="live-demo-section">
       <h2>LIVE DEMO</h2>
-      <p>Petchi is currently deployed and fully functional. You can try the complete app experience including pet naming, goal creation, and mood tracking. The app works best on mobile devices and can be installed to your home screen for the full app experience.</p>
+      <p>Petchi is currently online and fully functional. You can try the complete app experience including pet naming, goal creation, and mood tracking. The app works best on mobile devices and can be added to your home screen for the full app experience.</p>
       
       <button class="live-demo-button">TRY PETCHI LIVE</button>
     </div>
+
+      <h3>VERSION CONTROL</h3>
+  <div class="version-control-container">
+    <div class="version-control-text">
+      <p>I used GitHub to keep track of all my changes while building this app.</p>
+      
+      <p>GitHub made it easy to commit changes and see what I was working on. I tried to make good commit messages so I could remember what I changed and why.</p>
+
+      <button class="github-repo-petchi-button">VIEW GITHUB REPOSITORY</button>
+    </div>
+  </div>
   `
 }
 };

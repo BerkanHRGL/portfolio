@@ -78,7 +78,7 @@ loadProject: function(projectKey) {
    const fieldResearchButton = document.querySelector('.research-details-button');
    if (fieldResearchButton) {
     fieldResearchButton.addEventListener('click', () => {
-    window.open('pdfs/-field-research-petchi.pdf', '_blank');
+    window.open('pdfs/field-research-petchi.pdf', '_blank');
     });
 }
 
@@ -151,6 +151,13 @@ loadProject: function(projectKey) {
     if (githubRepoButton) {
       githubRepoButton.addEventListener('click', () => {
         window.open('https://github.com/BerkanHRGL/portfolio', '_blank');
+      });
+    }
+
+        const githubpetchiRepoButton = document.querySelector('.github-repo-petchi-button');
+    if (githubpetchiRepoButton) {
+      githubpetchiRepoButton.addEventListener('click', () => {
+        window.open('https://github.com/BerkanHRGL/pet-chi', '_blank');
       });
     }
 
