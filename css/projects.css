@@ -139,13 +139,13 @@
 .date-section h3 {
   font-family: 'PixelOperatorBold', monospace;
   font-size: 30px;
-  margin: 0 255px 10px 0;
+  margin: 0 0 10px 0;
   color: #fff;
 }
 
 .date-section p {
   font-size: 20px;
-  margin-top: 20px;
+  margin: 0;
   font-family: 'Space Mono', 'Inconsolata', 'Courier New', monospace;
 }
 
