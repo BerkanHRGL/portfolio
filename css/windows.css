@@ -548,7 +548,7 @@
     box-sizing: border-box;
   }
 
-  /* Window content: flex fills remaining height and scrolls */
+  /* Window content: fills remaining height and scrolls */
   .full-about-me-window .window-content,
   .contact-window .window-content,
   .logo-iterations-window .window-content,
@@ -561,7 +561,9 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding: 12px;
-    height: auto;
+    /* Fallback for when parent is display:block */
+    height: calc(100vh - 44px);
+    box-sizing: border-box;
   }
 
   /* Contact stats: 2 columns instead of 4 */

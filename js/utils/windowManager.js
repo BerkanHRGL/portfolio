@@ -50,7 +50,8 @@ const WindowManager = {
   },
   
   openWindow: function(windowElement, fromNavbar = false) {
-    windowElement.style.display = 'block';
+    // Remove inline display:none so the CSS display value (flex/block) takes effect
+    windowElement.style.display = '';
     STATE.openWindowsCount++;
     console.log("WindowManager: Opened window, count:", STATE.openWindowsCount);
 

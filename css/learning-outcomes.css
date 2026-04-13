@@ -397,8 +397,9 @@
   .learning-outcomes-window .project-content-container {
     flex-direction: column;
     flex: 1;
+    min-height: 0;
     overflow: hidden;
-    height: 0;
+    height: auto;
   }
 
   .learning-outcomes-window .project-menu {

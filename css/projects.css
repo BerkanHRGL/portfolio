@@ -849,8 +849,9 @@
   .project-content-container {
     flex-direction: column;
     flex: 1;
+    min-height: 0;
     overflow: hidden;
-    height: 0; /* forces flex child to respect parent height */
+    height: auto;
   }
 
   /* Side menu → horizontal scrolling tab bar */
