@@ -19,6 +19,7 @@ function startBootSequence() {
         ELEMENTS.infoSections[1].classList.add('visible');
         setTimeout(() => {
           ELEMENTS.enterPrompt.classList.add('visible');
+          ELEMENTS.bootScreen.classList.add('enter-visible');
         }, CONFIG.animation.infoSectionDelay);
       }, CONFIG.animation.infoSectionDelay);
     }, CONFIG.animation.infoSectionDelay);
@@ -758,6 +759,19 @@ function loadWindowTemplates() {
 
 // Keyboard event handlers
 function setupKeyboardEvents() {
+  const isMobile = () => window.matchMedia('(max-width: 768px)').matches || 'ontouchstart' in window;
+
+  // Update enter prompt text based on device
+  function updateEnterPromptText() {
+    const enterText = document.querySelector('.enter-text');
+    if (enterText) {
+      enterText.textContent = isMobile() ? 'Tap to load the website' : 'Press Enter to load the website';
+    }
+  }
+  updateEnterPromptText();
+  window.addEventListener('resize', updateEnterPromptText);
+
+  // Keyboard: Enter key
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
       if (ELEMENTS.loginScreen.style.display === 'none' && ELEMENTS.mainContent.style.display === 'none') {
@@ -765,6 +779,20 @@ function setupKeyboardEvents() {
       } else if (ELEMENTS.loginScreen.style.display !== 'none') {
         goToMainContent();
       }
+    }
+  });
+
+  // Touch/click: tap on boot screen to proceed
+  ELEMENTS.bootScreen.addEventListener('click', function() {
+    if (ELEMENTS.mainContent.style.display === 'none' && ELEMENTS.loginScreen.style.display !== 'flex') {
+      goToLoginScreen();
+    }
+  });
+
+  // Touch/click: tap on login screen to proceed
+  ELEMENTS.loginScreen.addEventListener('click', function() {
+    if (ELEMENTS.loginScreen.style.display !== 'none') {
+      goToMainContent();
     }
   });
 }

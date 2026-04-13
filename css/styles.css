@@ -87,6 +87,15 @@ body, html {
   font-size: 18px;
   display: none;
   align-items: center;
+  cursor: pointer;
+}
+
+#boot-screen {
+  cursor: default;
+}
+
+#boot-screen.enter-visible {
+  cursor: pointer;
 }
 
 .enter-text {
