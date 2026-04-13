@@ -36,11 +36,19 @@ function goToMainContent() {
   STATE.typeSound.stop();
   ELEMENTS.loginScreen.style.display = "none";
   ELEMENTS.mainContent.style.display = "block";
-  
+
   const aboutWindow = document.querySelector('.about-me-window');
   aboutWindow.style.display = "block";
   STATE.openWindowsCount = 1;
-  
+
+  // On mobile: move about-me window into main content flow, after the datetime display
+  if (window.innerWidth <= 768) {
+    const datetimeDisplay = document.getElementById('datetime-display');
+    if (datetimeDisplay && datetimeDisplay.parentNode === ELEMENTS.mainContent) {
+      ELEMENTS.mainContent.insertBefore(aboutWindow, datetimeDisplay.nextSibling);
+    }
+  }
+
   WindowManager.setActiveWindow(aboutWindow);
   ELEMENTS.blurOverlay.style.display = 'none';
 }

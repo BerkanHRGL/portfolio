@@ -1057,7 +1057,7 @@ body, html {
   /* Hide CD player and maple leaf on mobile (easter eggs) */
   .cd-player,
   .maple-icon {
-    display: none;
+    display: none !important;
   }
 
   /* Navbar: fixed at bottom, full width, smaller */

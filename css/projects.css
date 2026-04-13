@@ -845,11 +845,12 @@
     font-size: 28px;
   }
 
-  /* Project content container: column instead of row */
+  /* Project content container: column, fills remaining window height */
   .project-content-container {
     flex-direction: column;
-    height: auto;
-    overflow: visible;
+    flex: 1;
+    overflow: hidden;
+    height: 0; /* forces flex child to respect parent height */
   }
 
   /* Side menu → horizontal scrolling tab bar */
@@ -876,12 +877,14 @@
     white-space: nowrap;
   }
 
-  /* Project content: scrollable */
+  /* Project content: scrollable, fills remaining height */
   .project-content {
-    height: auto;
-    min-height: 60vh;
-    overflow-y: visible;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     padding: 12px;
+    height: auto;
   }
 
   /* All side-by-side containers → stacked */

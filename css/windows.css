@@ -548,20 +548,20 @@
     box-sizing: border-box;
   }
 
-  /* Window content: scrollable with momentum */
-  .projects-window .window-content,
+  /* Window content: flex fills remaining height and scrolls */
   .full-about-me-window .window-content,
-  .learning-outcomes-window .window-content,
   .contact-window .window-content,
   .logo-iterations-window .window-content,
   .interview-details-window .window-content,
   .content-strategy-window .window-content,
   .research-details-window .window-content,
   .wireframe-details-window .window-content {
+    flex: 1;
+    min-height: 0;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    height: calc(100% - 40px);
     padding: 12px;
+    height: auto;
   }
 
   /* Contact stats: 2 columns instead of 4 */
@@ -582,11 +582,14 @@
     grid-template-columns: 1fr;
   }
 
-  /* About-me small window: static in mobile flow */
+  /* About-me small window: static in mobile flow, always fully visible */
   .about-me-window {
     position: static !important;
     width: 100% !important;
     box-sizing: border-box;
+    opacity: 1 !important;
+    filter: none !important;
+    z-index: auto !important;
   }
 
   /* Window title smaller */

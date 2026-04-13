@@ -393,11 +393,12 @@
    MOBILE LEARNING OUTCOMES
    ===================== */
 @media (max-width: 768px) {
-  /* Learning outcomes window: sidebar → horizontal tab bar */
+  /* Learning outcomes: sidebar → horizontal tab bar */
   .learning-outcomes-window .project-content-container {
     flex-direction: column;
-    overflow: visible;
-    height: auto;
+    flex: 1;
+    overflow: hidden;
+    height: 0;
   }
 
   .learning-outcomes-window .project-menu {
@@ -411,15 +412,17 @@
     gap: 8px;
     flex-shrink: 0;
     min-height: unset;
+    white-space: nowrap;
   }
 
   .learning-outcomes-window .project-content {
-    height: auto;
-    min-height: 60vh;
-    overflow-y: visible;
-    padding: 12px 12px 60px 12px;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px 12px 40px 12px;
     max-height: unset;
-    padding-bottom: 60px;
+    height: auto;
   }
 
   /* Stage images: stack vertically */
