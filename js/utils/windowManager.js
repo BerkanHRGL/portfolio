@@ -53,9 +53,14 @@ const WindowManager = {
     windowElement.style.display = 'block';
     STATE.openWindowsCount++;
     console.log("WindowManager: Opened window, count:", STATE.openWindowsCount);
-    
+
     if (fromNavbar) {
       ELEMENTS.blurOverlay.style.display = 'block';
+    }
+
+    // Lock body scroll on mobile while a window is open
+    if (window.innerWidth <= 768) {
+      document.body.style.overflow = 'hidden';
     }
     
     // Set the opened window as active
@@ -69,6 +74,11 @@ const WindowManager = {
     windowElement.classList.remove('window-active', 'window-inactive');
     STATE.openWindowsCount--;
     console.log("WindowManager: Closed window, count:", STATE.openWindowsCount);
+
+    // Restore body scroll on mobile when all overlay windows are closed
+    if (window.innerWidth <= 768 && STATE.openWindowsCount <= 1) {
+      document.body.style.overflow = '';
+    }
     
     // Find visible windows
     const visibleWindows = Array.from(this.windows).filter(win => 

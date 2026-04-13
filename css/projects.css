@@ -812,13 +812,177 @@
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .character-design-image {
     order: 1;
   }
-  
+
   .character-design-text {
     order: 2;
+  }
+}
+
+/* =====================
+   MOBILE PROJECTS
+   ===================== */
+@media (max-width: 768px) {
+  /* Project header: smaller, stacked */
+  .project-header {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%;
+    min-width: unset;
+    padding: 0;
+  }
+
+  .project-header h1,
+  .project-header h2 {
+    font-size: 28px;
+  }
+
+  /* Project content container: column instead of row */
+  .project-content-container {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Side menu → horizontal scrolling tab bar */
+  .project-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px;
+    gap: 8px;
+    background-color: #000;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .menu-item {
+    display: inline-block;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    padding: 8px 12px;
+    white-space: nowrap;
+  }
+
+  /* Project content: scrollable */
+  .project-content {
+    height: auto;
+    min-height: 60vh;
+    overflow-y: visible;
+    padding: 12px;
+  }
+
+  /* All side-by-side containers → stacked */
+  .moodboard-container,
+  .stylescape-container,
+  .logo-container,
+  .planning-container,
+  .persona-container,
+  .survey-container,
+  .wireframe-container,
+  .prototype-container,
+  .pixel-art-container,
+  .carousel-layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .moodboard-image,
+  .moodboard-text,
+  .stylescape-image,
+  .stylescape-text,
+  .final-logo,
+  .logo-text,
+  .planning-image,
+  .planning-text,
+  .persona-image,
+  .persona-text,
+  .survey-image,
+  .survey-text,
+  .wireframe-image,
+  .wireframe-text,
+  .prototype-image,
+  .prototype-text,
+  .pixel-art-image,
+  .pixel-art-text,
+  .carousel-left,
+  .carousel-right {
+    max-width: 100%;
+    flex: unset;
+    width: 100%;
+  }
+
+  /* Image rows (mockups, iterations) → stacked */
+  .mockups-images,
+  .iteration-images {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mockup-item img {
+    height: auto;
+  }
+
+  /* Project info row */
+  .project-info-row {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .date-section {
+    text-align: left;
+    margin: 0;
+  }
+
+  /* Reduce large top margins from desktop spacing */
+  .research-section,
+  .planning-section,
+  .persona-section,
+  .design-process-section,
+  .presenting-section,
+  .moodboard-section,
+  .stylescape-section,
+  .logo-section,
+  .mockups-section,
+  .presentation-section,
+  .pixel-art-section,
+  .user-testing-section {
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  .research-section h3,
+  .design-process-section h3 {
+    margin-top: 32px;
+  }
+
+  /* Text sizes */
+  .project-content p,
+  .project-content ul,
+  .project-content li {
+    font-size: 15px;
+  }
+
+  .project-content h2 {
+    font-size: 22px;
+  }
+
+  .project-content h3,
+  .date-section h3 {
+    font-size: 20px;
   }
 }
 

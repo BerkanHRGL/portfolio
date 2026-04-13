@@ -388,3 +388,97 @@
   margin-top: 20px;
   margin-bottom: 100px; /* Extra bottom margin for scrolling */
 }
+
+/* =====================
+   MOBILE LEARNING OUTCOMES
+   ===================== */
+@media (max-width: 768px) {
+  /* Learning outcomes window: sidebar → horizontal tab bar */
+  .learning-outcomes-window .project-content-container {
+    flex-direction: column;
+    overflow: visible;
+    height: auto;
+  }
+
+  .learning-outcomes-window .project-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px;
+    gap: 8px;
+    flex-shrink: 0;
+    min-height: unset;
+  }
+
+  .learning-outcomes-window .project-content {
+    height: auto;
+    min-height: 60vh;
+    overflow-y: visible;
+    padding: 12px 12px 60px 12px;
+    max-height: unset;
+    padding-bottom: 60px;
+  }
+
+  /* Stage images: stack vertically */
+  .stage-images {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .stage-images img,
+  .iteration-stage > img,
+  .wireframe-stage > img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+  }
+
+  /* Header fonts smaller */
+  .iterations-header h1,
+  .interview-header h1,
+  .strategy-header h1,
+  .research-header h1,
+  .wireframe-process-header h1 {
+    font-size: 30px;
+  }
+
+  .iterations-header h2,
+  .interview-header h2,
+  .strategy-header h2 {
+    font-size: 20px;
+  }
+
+  /* Text sizes */
+  .interview-details-window p,
+  .content-strategy-window p,
+  .research-details-window p,
+  .wireframe-details-window p,
+  .evidence-item p,
+  .learning-outcome-conclusion p {
+    font-size: 14px;
+  }
+
+  .interview-details-window h3,
+  .content-strategy-window h3,
+  .research-details-window h3 {
+    font-size: 18px;
+  }
+
+  .learning-outcome-description p {
+    font-size: 14px;
+  }
+
+  .evidence-item h4 {
+    font-size: 18px;
+  }
+
+  .learning-outcome-evidence h3,
+  .learning-outcome-conclusion h3 {
+    font-size: 20px;
+  }
+}

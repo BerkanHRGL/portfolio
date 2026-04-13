@@ -521,3 +521,76 @@
   top: 2px;
   left: 2px;
 }
+
+/* =====================
+   MOBILE WINDOWS
+   ===================== */
+@media (max-width: 768px) {
+  /* All large windows go full-screen */
+  .projects-window,
+  .full-about-me-window,
+  .learning-outcomes-window,
+  .contact-window,
+  .logo-iterations-window,
+  .interview-details-window,
+  .content-strategy-window,
+  .research-details-window,
+  .wireframe-details-window {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    border: none !important;
+    border-top: 4px solid #D9D9D9 !important;
+    box-sizing: border-box;
+  }
+
+  /* Window content: scrollable with momentum */
+  .projects-window .window-content,
+  .full-about-me-window .window-content,
+  .learning-outcomes-window .window-content,
+  .contact-window .window-content,
+  .logo-iterations-window .window-content,
+  .interview-details-window .window-content,
+  .content-strategy-window .window-content,
+  .research-details-window .window-content,
+  .wireframe-details-window .window-content {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: calc(100% - 40px);
+    padding: 12px;
+  }
+
+  /* Contact stats: 2 columns instead of 4 */
+  .contact-stats,
+  .profile-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact/profile header: stack vertically */
+  .contact-header,
+  .profile-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Opportunity grid: 1 column */
+  .opportunity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About-me small window: static in mobile flow */
+  .about-me-window {
+    position: static !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Window title smaller */
+  .window-title {
+    font-size: 16px;
+  }
+}

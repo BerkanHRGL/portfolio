@@ -970,13 +970,135 @@ body, html {
     right: 15px;
     padding: 8px 12px;
   }
-  
+
   .time-display {
     font-size: 16px;
   }
-  
+
   .date-display {
     font-size: 12px;
+  }
+}
+
+/* =====================
+   MOBILE RESPONSIVE
+   ===================== */
+@media (max-width: 768px) {
+  /* Allow full-page scrolling on mobile */
+  body, html {
+    overflow: auto;
+    height: auto;
+  }
+
+  /* Boot screen */
+  #boot-screen {
+    min-height: 100vh;
+    padding: 30px 20px;
+  }
+
+  /* Login screen */
+  #login-screen {
+    min-height: 100vh;
+  }
+
+  /* Main content: scrollable column */
+  #main-content {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding: 16px 16px 120px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-title {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .student-title {
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding: 10px 12px;
+  }
+
+  .name-container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .name-logo {
+    width: 85%;
+    max-width: 340px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+    margin-top: -10px;
+  }
+
+  /* Clock: static position in flow */
+  .datetime-display {
+    position: static;
+    text-align: center;
+    margin: 12px 0;
+    padding: 8px 12px;
+  }
+
+  .time-display {
+    font-size: 20px;
+  }
+
+  .date-display {
+    font-size: 14px;
+  }
+
+  /* Hide CD player and maple leaf on mobile (easter eggs) */
+  .cd-player,
+  .maple-icon {
+    display: none;
+  }
+
+  /* Navbar: fixed at bottom, full width, smaller */
+  .bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    box-sizing: border-box;
+    background: #000;
+    border-top: 2px solid #D9D9D9;
+    z-index: 1000;
+  }
+
+  .navbar-container {
+    border: none;
+    padding: 8px 4px 10px 4px;
+    gap: 0;
+    justify-content: space-around;
+  }
+
+  .navbar-icon img {
+    width: 42px;
+    height: 36px;
+  }
+
+  .navbar-label {
+    font-size: 0.65em;
+    min-width: unset;
+    padding: 2px 3px 1px 3px;
+  }
+
+  /* About-me popup window: position in flow */
+  .about-me-window {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
   }
 }
 
@@ -1092,24 +1214,4 @@ body, html {
   }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .maple-icon {
-    bottom: 120px;
-    right: 80px;
-  }
-  
-  .maple-container {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .maple-image {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .maple-label {
-    font-size: 14px;
-  }
-}
+/* Maple responsive kept in main mobile block above */
