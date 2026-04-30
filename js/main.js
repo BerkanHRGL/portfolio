@@ -342,7 +342,7 @@ function loadWindowTemplates() {
       <div class="cta-content">
        <p>Got a cool project, internship opportunity, or just want to chat about design? Send me a message! I love new challenges and I'm always ready to learn something new.</p>
         <div class="cta-button-container">
-          <button class="cta-button" onclick="window.location.href='mailto:berkan@example.com'">
+          <button class="cta-button" onclick="window.location.href='mailto:berkanhergul@hotmail.com'">
             SEND AN EMAIL
           </button>
         </div>
