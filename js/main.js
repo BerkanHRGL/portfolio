@@ -74,8 +74,10 @@ function setupNavigation() {
       
       switch(clickedSection) {
         case 'projects':
-          const projectsWindow = document.querySelector('.projects-window');
-          WindowManager.openWindow(projectsWindow, true);
+          document.getElementById('projects-showcase').style.display = 'flex';
+          document.getElementById('showcase-right').scrollTop = 0;
+          WindowManager.closeWindow(document.querySelector('.about-me-window'));
+          document.getElementById('datetime-display').style.display = 'none';
           break;
         case 'learning-outcomes':
           const learningOutcomesWindow = document.querySelector('.learning-outcomes-window');
@@ -846,6 +848,206 @@ function setupMoreAboutButton() {
   }
 }
 
+// Projects showcase data — module level so showProjectDetail can access it
+const showcaseProjects = [
+  {
+    key: 'branding',
+    num: '01 / 05',
+    title: 'BORIS SCHMIDT',
+    thumbnail: 'imgs/boris-thumbnail.png',
+    type: 'BRANDING',
+    client: 'BORIS SCHMIDT',
+    year: '2025',
+    desc: 'Complete visual identity for a techno artist — from moodboard and persona research to final logo, stylescapes, and mockups.'
+  },
+    {
+      key: 'ux',
+      num: '02 / 05',
+      title: 'CARDAN UX',
+      thumbnail: 'imgs/cardan-logo.png',
+      type: 'UX DESIGN',
+      client: 'CARDAN',
+      year: '2025',
+      desc: 'Research-driven design for an online visual impairment simulation. Created the "maison de couture" fashion game concept.'
+    },
+    {
+      key: 'development',
+      num: '03 / 05',
+      title: 'CARDAN DEV',
+      thumbnail: 'imgs/cardan-logo.png',
+      type: 'FRONT-END DEV',
+      client: 'CARDAN',
+      year: '2025',
+      desc: 'Built interactive blurry-vision simulation games in HTML, CSS & JavaScript. Includes user testing and GitLab version control.'
+    },
+    {
+      key: 'portfolio',
+      num: '04 / 05',
+      title: 'PORTFOLIO',
+      thumbnail: 'imgs/portfolio-thumbnail.png',
+      type: 'PORTFOLIO',
+      client: 'PERSONAL',
+      year: '2025',
+      desc: 'This retro OS-inspired portfolio — designed in Figma, coded from scratch with vanilla JS, CSS animations, and a custom window manager.'
+    },
+    {
+      key: 'projectx',
+      num: '05 / 05',
+      title: 'PETCHI',
+      thumbnail: 'imgs/petchi-thumbnail.png',
+      type: 'PERSONAL PROJECT',
+      client: 'PERSONAL',
+      year: '2025',
+      desc: "Goal-tracking web app where your virtual pet's mood directly reflects how well you're completing your daily tasks."
+    }
+];
+
+// Projects Showcase
+function setupProjectsShowcase() {
+  const rightPanel = document.getElementById('showcase-right');
+  const previewImg = document.getElementById('showcase-preview-img');
+  const showcase = document.getElementById('projects-showcase');
+  const backBtn = document.querySelector('.showcase-back-btn');
+
+  if (!rightPanel || !previewImg) return;
+
+  previewImg.src = showcaseProjects[0].thumbnail;
+
+  rightPanel.innerHTML = showcaseProjects.map(p => `
+    <div class="showcase-card" data-key="${p.key}" data-thumb="${p.thumbnail}">
+      <div class="card-inner">
+        <div class="card-titlebar">
+          <span>${p.title}</span>
+          <span class="card-titlebar-arrow">&#x2197;</span>
+        </div>
+        <div class="card-body">
+          <div class="card-num">${p.num}</div>
+          <h2 class="card-title">${p.title}</h2>
+          <div class="card-meta">
+            <span>${p.client}</span>
+            <span>${p.type}</span>
+            <span>${p.year}</span>
+          </div>
+          <p class="card-desc">${p.desc}</p>
+          <button class="card-view-btn" data-project="${p.key}">VIEW &#x2192;</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const thumb = entry.target.getAttribute('data-thumb');
+        previewImg.classList.add('fading');
+        setTimeout(() => {
+          previewImg.src = thumb;
+          previewImg.classList.remove('fading');
+        }, 250);
+      }
+    });
+  }, { root: rightPanel, threshold: 0.4 });
+
+  document.querySelectorAll('.showcase-card').forEach(card => observer.observe(card));
+
+  rightPanel.addEventListener('click', e => {
+    const btn = e.target.closest('.card-view-btn');
+    if (!btn) return;
+    const projectKey = btn.getAttribute('data-project');
+    showcase.style.display = 'none';
+    showProjectDetail(projectKey);
+  });
+
+  if (backBtn) {
+    backBtn.addEventListener('click', () => {
+      showcase.style.display = 'none';
+      document.getElementById('datetime-display').style.display = 'flex';
+    });
+  }
+}
+
+// Project Detail Page
+function showProjectDetail(projectKey) {
+  const project = projectData[projectKey];
+  if (!project) return;
+
+  const meta = showcaseProjects.find(p => p.key === projectKey) || {};
+
+  document.getElementById('detail-category').textContent = project.type || '';
+  document.getElementById('detail-title').textContent = meta.title || project.type || '';
+  document.getElementById('detail-desc').textContent = meta.desc || '';
+
+  document.getElementById('detail-meta').innerHTML = `
+    <div class="meta-item"><div class="meta-label">ROLE</div><div class="meta-value">${project.role || '—'}</div></div>
+    <div class="meta-item"><div class="meta-label">CLIENT</div><div class="meta-value">${project.client || '—'}</div></div>
+    <div class="meta-item"><div class="meta-label">YEAR</div><div class="meta-value">${meta.year || '2025'}</div></div>
+  `;
+
+  document.getElementById('detail-thumb').src = meta.thumbnail || '';
+
+  const contentEl = document.getElementById('detail-content');
+  contentEl.innerHTML = project.content;
+
+  // Build section tabs from h2 headings
+  const tabsEl = document.getElementById('detail-tabs');
+  tabsEl.innerHTML = '';
+  const scroll = document.getElementById('detail-scroll');
+  const topbarH = document.querySelector('.detail-topbar').offsetHeight;
+  const tabMap = new Map();
+
+  contentEl.querySelectorAll('h2').forEach((h2, i) => {
+    const id = 'ds-' + h2.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    h2.id = id;
+    const tab = document.createElement('button');
+    tab.className = 'detail-tab' + (i === 0 ? ' active' : '');
+    tab.textContent = h2.textContent.trim();
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const target = document.getElementById(id);
+      if (target) scroll.scrollTo({ top: target.offsetTop - topbarH - 16, behavior: 'smooth' });
+    });
+    tabsEl.appendChild(tab);
+    tabMap.set(id, tab);
+  });
+
+  // Scroll-based active tab tracking
+  if (scroll._sectionTracker) {
+    scroll.removeEventListener('scroll', scroll._sectionTracker);
+  }
+  const allH2s = Array.from(contentEl.querySelectorAll('h2'));
+  let rafPending = false;
+  scroll._sectionTracker = function() {
+    if (rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(() => {
+      rafPending = false;
+      const containerTop = scroll.getBoundingClientRect().top;
+      let activeId = allH2s[0]?.id;
+      for (const h2 of allH2s) {
+        if (h2.getBoundingClientRect().top - containerTop <= 80) activeId = h2.id;
+      }
+      document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
+      const activeTab = tabMap.get(activeId);
+      if (activeTab) activeTab.classList.add('active');
+    });
+  };
+  scroll.addEventListener('scroll', scroll._sectionTracker);
+
+  Projects.attachProjectEventListeners();
+  ImagePopup.init();
+  document.getElementById('project-detail').style.display = 'flex';
+  scroll.scrollTop = 0;
+}
+
+function setupProjectDetail() {
+  document.querySelector('.detail-back-btn').addEventListener('click', () => {
+    document.getElementById('project-detail').style.display = 'none';
+    document.getElementById('projects-showcase').style.display = 'flex';
+    document.getElementById('datetime-display').style.display = 'none';
+  });
+}
+
 // Main DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', () => {
   console.log("DOM fully loaded");
@@ -916,6 +1118,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupKeyboardEvents();
   setupClickOutsideToClose();
   setupMoreAboutButton();
+  setupProjectsShowcase();
+  setupProjectDetail();
   
   // Setup confirm button
   if (ELEMENTS.confirmButton) {

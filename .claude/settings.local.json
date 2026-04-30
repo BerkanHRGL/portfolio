@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:pricharielp.framer.website)",
+      "Bash(python *)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\berka\\\\Documents\\\\GitHub\\\\portfolio\\\\imgs\\\\cardan-logo.png\"\\); \"$\\($img.Width\\) x $\\($img.Height\\)\")"
+    ]
+  }
+}

@@ -378,21 +378,23 @@ body, html {
 }
 
 .image-popup-close {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  color: #D9D9D9;
-  font-size: 30px;
-  font-family: 'VT323', monospace;
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  color: #fff;
+  font-size: 22px;
+  font-family: 'Space Mono', monospace;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 5px 10px;
-  border: 2px solid #D9D9D9;
+  background: none;
+  border: none;
+  opacity: 0.6;
   z-index: 10003 !important;
+  line-height: 1;
+  padding: 4px;
 }
 
 .image-popup-close:hover {
-  background-color: rgba(217, 217, 217, 0.2);
+  opacity: 1;
 }
 
 /* Global clickable image utility */

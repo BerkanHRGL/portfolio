@@ -2,7 +2,8 @@
 const projectData = {
   branding: {
     type: "Branding",
-    client: "Client: Boris Schmidt",
+    client: "Boris Schmidt",
+    role: "Designer & Researcher",
     content: `
       <h2>PROJECT OVERVIEW</h2>
       <p>In this project I had to create a complete visual look for a techno artist named Boris Schmidt. I worked with my team to make visual designs that matched his music style and personality. My goal was to build a unique and easy-to-remember visual brand that would represent Boris Schmidt well.</p>
@@ -30,7 +31,36 @@ const projectData = {
         <h3>INTERVIEW</h3>
         <p>I interviewed Sophie, a 20-year-old techno fan, to better understand the target audience. She listens to melodic and minimal techno, especially artists like Tale of Us and Mind Against. Sophie uses techno music to relax and create a certain mood. She prefers festivals with a relaxed atmosphere and pays attention to album covers when choosing music.</p>
         <p>The interview helped me understand that techno fans like Sophie want more than just hard beats - they want atmosphere, emotion, and beautiful visuals. This insight shaped how I designed Boris Schmidt's brand to appeal to this audience.</p>
-        <button class="interview-details-button">VIEW FULL INTERVIEW</button>
+        <button class="interview-details-button accordion-toggle">VIEW FULL INTERVIEW ↓</button>
+        <div class="accordion-content">
+          <h3>INTERVIEW WITH SOPHIE (20 YEARS OLD)</h3>
+          <div class="interview-qa">
+            <p><strong>What genre of techno do you listen to?</strong><br>More towards melodic and minimal techno. I love the deep sound of artists like Tale of Us and Adriatique.</p>
+            <p><strong>Why do you listen to this music?</strong><br>It helps me relax and get into a certain mood. Sometimes it's even a bit calming.</p>
+            <p><strong>When do you listen to this music?</strong><br>Often in the car, at work, or just at home.</p>
+            <p><strong>Who is your favorite techno artist?</strong><br>Tale of Us and Mind Against.</p>
+            <p><strong>Which platform do you use most for music?</strong><br>Spotify, because I can easily make playlists there and discover new songs through the algorithms.</p>
+            <p><strong>Do you make your own playlists or listen to ready-made ones?</strong><br>I always make my own playlists. Spotify's playlists are sometimes too mainstream for my taste.</p>
+            <p><strong>Do you go to festivals?</strong><br>Yes, but I prefer festivals with a relaxed atmosphere like DGTL and Afterlife events.</p>
+            <p><strong>Do you pay attention to album covers?</strong><br>Yes, I think a cover can really say something about the music.</p>
+            <p><strong>Do you follow artists on social media?</strong><br>Yes, especially on Instagram. I like to see what their inspiration is and how they build their sets.</p>
+          </div>
+          <h3>CONCLUSION BASED ON SOPHIE</h3>
+          <p>Sophie loves techno, but especially the calm and melodic side, like Tale of Us and Mind Against. For her, it's not just about hard beats, but about atmosphere and emotion. She listens to techno to relax, for example at home or in the car.</p>
+          <p>She uses Spotify to listen to music and likes to discover new songs through the algorithms. She makes her own playlists because she finds ready-made playlists often too popular or not quite her taste.</p>
+          <p>When it comes to festivals, Sophie chooses parties with a relaxed atmosphere, like DGTL and Afterlife events. This shows that she prefers beautiful light shows and a nice environment over hard, industrial techno.</p>
+          <p>She also looks at album covers. A beautiful, minimalist cover makes her curious about the music. This means that the appearance of an album or track influences whether she will listen to it.</p>
+          <p>On social media, she follows artists mainly on Instagram. She finds it interesting to see how they make their music and prepare. Artists who show what inspires them and how they work get her attention.</p>
+          <h3>HOW I USED THIS FOR MY DESIGN</h3>
+          <p>Based on Sophie's interview, I learned that techno fans want more than just music - they want atmosphere, emotion, and beautiful visuals. This helped me design Boris Schmidt's brand to focus on:</p>
+          <ul>
+            <li>Creating a mysterious and atmospheric visual style that matches the mood Sophie and similar fans are looking for</li>
+            <li>Designing clean, minimalist covers that would catch Sophie's attention on Spotify</li>
+            <li>Building a brand that works well on Instagram, where Sophie discovers and follows artists</li>
+            <li>Focusing on the connection between nature and techno, which appeals to fans who want relaxed, atmospheric experiences</li>
+          </ul>
+          <p>The interview confirmed that Boris Schmidt's vision of combining techno with nature and mystery would appeal to this target audience.</p>
+        </div>
         
         <h3>PERSONA</h3>
         <div class="persona-container">
@@ -56,7 +86,57 @@ const projectData = {
         
         <h3>CONTENT STRATEGY</h3>
         <p>I created this content strategy because it's important to present the brand in a consistent way. With a clear strategy, I know what tone, style, and type of content we should use to reach the right target audience. It helps me convey the message effectively and increase brand visibility.</p>
-        <button class="content-strategy-button">VIEW FULL STRATEGY</button>
+        <button class="content-strategy-button accordion-toggle">VIEW FULL STRATEGY ↓</button>
+        <div class="accordion-content">
+          <h3>1. BEST DAYS AND TIMES TO POST</h3>
+          <p>Optimizing posting times increases visibility and engagement. For Boris, the following moments are ideal:</p>
+          <h4>Instagram:</h4>
+          <p>Best Days: Friday, followed by Saturday and Tuesday<br>Time: Between 6:00 PM and 8:59 PM, with a peak around 8:00 PM</p>
+          <h4>TikTok:</h4>
+          <p>Monday: 6:00 AM, 10:00 AM, 10:00 PM<br>Tuesday: 2:00 AM, 4:00 AM, 6:00 AM<br>Wednesday: 8:00 AM, 9:00 AM, 11:00 PM<br>Thursday: 9:00 AM, 12:00 PM, 6:00 PM<br>Friday: 6:00 AM, 1:00 PM, 4:00 PM<br>Saturday: 11:00 AM, 7:00 PM, 8:00 PM<br>Sunday: 7:00 AM, 9:00 AM, 4:00 PM</p>
+          <h3>2. RECOMMENDED CONTENT TYPES</h3>
+          <ul>
+            <li>Behind the Scenes (BTS): Show the creative process, studio recordings, and rehearsals</li>
+            <li>Q&A Sessions: Answer fan questions through live videos or stories</li>
+            <li>Polls and Surveys: Ask about fan preferences for setlists, merchandise, or future releases</li>
+            <li>Skits: These often work well with this generation if done properly</li>
+            <li>User-Generated Content (UGC): Share fan content like photos or videos from performances</li>
+          </ul>
+          <h3>3. COMPETITOR RESEARCH</h3>
+          <ul>
+            <li>Collaborations: Work with other artists or influencers to reach a broader audience</li>
+            <li>Live Sessions: Organize live streams on platforms like Instagram and TikTok for direct fan interaction</li>
+            <li>Hashtag Usage: Use relevant hashtags to increase post visibility and attract new followers</li>
+            <li>Visual Consistency: Maintain a cohesive aesthetic on platforms like Instagram to strengthen the brand</li>
+          </ul>
+          <h3>4. PLATFORM-SPECIFIC RECOMMENDATIONS</h3>
+          <h4>TikTok:</h4>
+          <p>Content: Short, trend-focused videos with quick edits and catchy music<br>Strategy: Share snippets of new tracks, challenges, and collaborations</p>
+          <h4>Instagram:</h4>
+          <p>Content: Visually appealing photos, reels, and stories that give a glimpse into Boris' personal life and career<br>Strategy: Share BTS moments, announcements, and fan interaction through polls and Q&As</p>
+          <h3>5. PROMOTION INITIATIVES</h3>
+          <ul>
+            <li>Tagging Labels and Events: Increase visibility by tagging relevant labels and events</li>
+            <li>Collaborations: Work with other artists or influencers for cross-promotion</li>
+            <li>Live Sessions: Organize live streams for real-time fan interaction</li>
+            <li>Hashtag Campaigns: Create brand-related hashtags and encourage fans to use them</li>
+            <li>User-Generated Content: Encourage fans to share their experiences</li>
+            <li>Advertisements: Invest in targeted ads on TikTok and Instagram</li>
+          </ul>
+          <h3>6. HASHTAGS</h3>
+          <h4>General Techno:</h4>
+          <p>#techno #technomusic #undergroundtechno #technodj #technoset #electronicmusic #edmcommunity #raveculture</p>
+          <h4>Festival and Club:</h4>
+          <p>#technofestival #clubculture #warehouserave #technorave #berlintechno #ibizatechno #technoscene</p>
+          <h4>For DJs and Producers:</h4>
+          <p>#djlife #musicproducer #technoproducer #studiosessions #undergroundmusic #modularsynths #drummachines</p>
+          <h4>Trending:</h4>
+          <p>#technovibes #technolovers #hardtechno #acidtechno #melodictechno #technocommunity</p>
+          <h4>Events and Labels:</h4>
+          <p>#awakenings #timewarp #ade #drumcode #afterlife #boilerroom #berghain</p>
+          <h4>Personal:</h4>
+          <p>#boristechno #borislive</p>
+        </div>
       </div>
 
       <div class="moodboard-section">
@@ -107,7 +187,49 @@ const projectData = {
           <div class="logo-text">
             <p>The final logo combines sound waves with geometric shapes to represent Boris's connection between techno music and nature. The sound wave pattern in the center shows the music element, while the organic flowing shapes around it represent the natural world he draws inspiration from.</p>
             <p>The logo works well in different sizes and can be used across all brand materials. The black and white version ensures it works in any situation, while the design captures both the technical and natural sides of Boris's identity.</p>
-            <button class="logo-iterations-button">VIEW DESIGN PROCESS</button>
+            <button class="logo-iterations-button accordion-toggle">VIEW DESIGN PROCESS ↓</button>
+            <div class="accordion-content">
+              <p>Here you can see the complete design process from the first ideas to the final logo. Each step helped me understand what worked and what didn't, leading to the final design that perfectly represents Boris Schmidt's brand.</p>
+              <div class="iteration-stage">
+                <h3>STAGE 1: GLITCH CONCEPTS</h3>
+                <div class="stage-images">
+                  <img src="imgs/logo_1.png" alt="Logo Iteration 1" class="clickable-image">
+                  <img src="imgs/logo_2_boris.png" alt="Logo Iteration 2" class="clickable-image">
+                </div>
+                <p>I started by trying out different glitch-style designs to show the techno music feeling. I played with broken text effects, using lines and static to distort the letters. I tested both the full name 'Boris Schmidt' and short versions like 'BS' and 'ST' to see what worked best. The green and black colors were picked to match the mysterious forest feel Boris wanted, mixing techno energy with nature.</p>
+              </div>
+              <div class="iteration-stage">
+                <h3>STAGE 2: GOTHIC STYLE EXPLORATION</h3>
+                <div class="stage-images">
+                  <img src="imgs/logo_3_boris.png" alt="Logo Iteration 3" class="clickable-image">
+                  <img src="imgs/logo_boris_4.png" alt="Logo Iteration 4" class="clickable-image">
+                </div>
+                <p>I moved away from glitch effects and tried a gothic style approach. I made bold, dark letters for 'BORIS' and kept 'SCHMIDT' lighter to create contrast. I added flowing organic shapes around the text to represent the nature side of Boris's brand. This style felt more mysterious and connected to the dark forest theme he wanted, while still looking strong and bold like techno music.</p>
+              </div>
+              <div class="iteration-stage">
+                <h3>STAGE 3: TYPOGRAPHY TESTING</h3>
+                <div class="stage-images">
+                  <img src="imgs/logo_boris_5.png" alt="Logo Iteration 5" class="clickable-image">
+                  <img src="imgs/logo_boris_7.png" alt="Logo Iteration 6" class="clickable-image">
+                </div>
+                <p>I stepped back and tried a cleaner approach with different typography styles. I tested various fonts and layouts to see what would work best for readability and impact. I tried everything from simple sans-serif fonts to more technical-looking typefaces. I also experimented with broken letters and different spacing to find the right balance between clean design and the edgy techno feeling Boris wanted.</p>
+              </div>
+              <div class="iteration-stage">
+                <h3>STAGE 4: NATURE CONCEPTS</h3>
+                <div class="stage-images">
+                  <img src="imgs/logo_boris_8.png" alt="Logo Iteration 7" class="clickable-image">
+                </div>
+                <p>I explored a completely different direction by focusing on the nature side of Boris's identity. I created mountain and landscape symbols with horizontal lines to show depth and texture. I tested different color variations from black to brown to see what felt most natural. This concept was about showing Boris's connection to the outdoors and natural world, moving away from the digital techno look.</p>
+              </div>
+              <div class="iteration-stage">
+                <h3>STAGE 5: SOUNDWAVE BREAKTHROUGH</h3>
+                <div class="stage-images">
+                  <img src="imgs/logo_boris_10.png" alt="Logo Iteration 8" class="clickable-image">
+                  <img src="imgs/logo_boris_12.png" alt="Logo Iteration 9" class="clickable-image">
+                </div>
+                <p>This was where everything came together. I combined sound waves with organic flowing shapes to represent both the techno music and nature elements. The sound wave pattern in the center shows the music side, while the flowing blue shapes around it represent natural forms like water or wind. This design finally captured both sides of Boris's identity in one strong symbol.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -147,7 +269,8 @@ const projectData = {
   
   ux: {
     type: "UX Design",
-    client: "Client: Cardan",
+    client: "Cardan",
+    role: "UX Designer & Researcher",
     content: `
       <h2>PROJECT OVERVIEW</h2>
       <p>In the UX project, my team and I created an online simulation for Cardan, a company that helps organizations make their websites accessible for people with visual impairments. We researched, made prototypes, got feedback, and presented our work to the client.</p>
@@ -198,7 +321,59 @@ const projectData = {
         
         <p>Through literature research and case study analysis, I discovered that many websites still fail to meet basic accessibility standards. For example, only 23% of Dutch municipal websites comply with established accessibility guidelines, highlighting the urgent need for better accessibility solutions.</p>
                 
-        <button class="research-details-button">VIEW FULL RESEARCH</button>
+        <button class="research-details-button accordion-toggle">VIEW FULL RESEARCH ↓</button>
+        <div class="accordion-content">
+          <h3>FIELD RESEARCH — COMPETITIVE ANALYSIS</h3>
+          <p><strong>Research method:</strong> Library research</p>
+          <p>I conducted research to identify existing companies specializing in digital accessibility for people with disabilities, similar to Cardan's mission.</p>
+          <h4>Competitor: Stuurlui</h4>
+          <p>Stuurlui is a WordPress agency from Utrecht specializing in digital accessibility. They design, build, and maintain websites that comply with WCAG 2.2 standards, making them accessible to everyone, including people with disabilities.</p>
+          <p>Stuurlui not only builds accessible websites but also shares helpful guides and articles. These guides explain the WCAG 2.2 rules in simple words so other organizations can learn how to follow them more easily.</p>
+          <p>Their research showed significant accessibility gaps in the Dutch market:</p>
+          <ul>
+            <li>Evaluated homepages of all 73 public hospitals in the Netherlands for accessibility compliance</li>
+            <li>Found that only 23% of 355 municipal websites met established accessibility guidelines</li>
+            <li>Provide practical guides and articles to help organizations improve digital accessibility</li>
+          </ul>
+          <h3>VISUAL IMPAIRMENT RESEARCH</h3>
+          <h4>What is visual impairment?</h4>
+          <p>Visual impairment means someone sees less than 30% or has a visual field smaller than 30 degrees. A normal visual field with both eyes is approximately 180 degrees. The visual limitation cannot be corrected by wearing glasses or contact lenses.</p>
+          <h4>Types of Visual Impairments:</h4>
+          <ul>
+            <li><strong>Blurred Vision</strong> — Has hazy or unclear sight</li>
+            <li><strong>Tunnel Vision</strong> — Vision appears as if looking through a tube</li>
+            <li><strong>Central Vision Loss</strong> — Sees a black spot centrally in their vision</li>
+          </ul>
+          <h4>Web accessibility problems for visually impaired users:</h4>
+          <ul>
+            <li><strong>Poor color contrast</strong> — Reading becomes difficult due to insufficient contrast between text and background</li>
+            <li><strong>Small or non-scalable text</strong> — Some websites block zooming functionality</li>
+            <li><strong>Images without descriptions</strong> — Images without alt-text are useless for screen readers</li>
+            <li><strong>Illogical structure and navigation</strong> — Lack of clear headings and logical layout makes quick page navigation difficult</li>
+            <li><strong>Moving or flashing content</strong> — Animations, carousels, and auto-moving content can be distracting and harder to read</li>
+            <li><strong>Forms and input fields</strong> — Forms can be problematic without clear labels explaining their purpose</li>
+            <li><strong>No screen reader support</strong> — Interactive elements like buttons and dropdowns may not work properly with screen readers</li>
+          </ul>
+          <h4>Solutions for better accessibility:</h4>
+          <ul>
+            <li><strong>Screen reader / TTS</strong> — Text on web pages is read aloud by a voice</li>
+            <li><strong>Alt-Text</strong> — Adding alt-text to sources like images allows screen readers to describe them</li>
+            <li><strong>Logical structure and navigation</strong> — Use clear buttons and ensure good structure</li>
+            <li><strong>Avoid moving and flashing content</strong> — Reduce distracting animations</li>
+            <li><strong>Accessible forms</strong> — Input fields must have clear labels and avoid disappearing placeholders</li>
+          </ul>
+          <h3>TARGET AUDIENCE RESEARCH</h3>
+          <h4>Research goal</h4>
+          <p>The goal of this research was to gain insight into the needs, problems, and desires of professionals within government institutions who work with digital accessibility.</p>
+          <h4>Target Group Description</h4>
+          <p>The primary target group consists of policy advisors, project leaders, and communication professionals within municipalities, ministries, or other government organizations. They work on improving digital services and must comply with the Digital Government Act (WCAG) guidelines.</p>
+          <h4>Research Methods</h4>
+          <p><strong>Literature research:</strong> I researched existing information about digital accessibility, the Digital Government Act, and WCAG guidelines. I also analyzed Cardan's website to understand their approach to digital accessibility.</p>
+          <p><strong>Case study analysis:</strong> To understand how Cardan applies digital accessibility in practice, I analyzed their website and other digital platforms, evaluating their compliance with accessibility standards like WCAG guidelines.</p>
+          <h3>CONCLUSION</h3>
+          <p>The research revealed a significant gap between legal requirements and actual implementation of digital accessibility. With only 23% of government websites meeting basic accessibility standards, there's a clear need for better tools, training, and support systems for government professionals responsible for digital accessibility compliance.</p>
+          <p>Understanding the specific challenges faced by visually impaired users provided crucial insights for developing more effective accessibility solutions that go beyond mere compliance to create truly inclusive digital experiences.</p>
+        </div>
       </div>
 
       <div class="persona-section">
@@ -269,7 +444,8 @@ const projectData = {
 
   development: {
     type: "Front-End Development",
-    client: "Client: Cardan",
+    client: "Cardan",
+    role: "Front-End Developer",
     content: `
       <h2>PROJECT OVERVIEW</h2>
       <p>This development project involved creating interactive visual impairment simulations for Cardan, a company that helps organizations make their websites accessible for people with disabilities. I developed web-based games that simulate different types of visual impairments to help users understand accessibility challenges.</p>
@@ -413,6 +589,8 @@ const projectData = {
   
   portfolio: {
     type: "Portfolio",
+    client: "Personal",
+    role: "Designer & Developer",
     content: `
     <h2>PROJECT OVERVIEW</h2>
     <p>This portfolio website development project involved creating a personal digital showcase to present my work as a student. The project demonstrates my skills in front-end development, UX/UI design, and creative coding while providing an interactive platform to display my projects and achievements.</p>    
@@ -567,7 +745,9 @@ const projectData = {
   },
 
   projectx: {
-  type: "PETCHI",
+  type: "Personal Project",
+  client: "Personal",
+  role: "Designer & Developer",
   content: `
     <h2>PROJECT OVERVIEW</h2>
     <p>Petchi is a goal-tracking web app I developed that combines productivity with emotional connection through a virtual pet. The concept is simple but powerful, the better you complete your daily goals, the happier your pet becomes. This approach makes task management more engaging and personally meaningful.</p>
@@ -603,8 +783,8 @@ const projectData = {
       <p>This research revealed an opportunity to create a simple goal-tracking app that combines emotional connection through a virtual pet with practical productivity features, where the pet's mood directly reflects real task completion.</p>
       
       <p>There's a gap between emotionally engaging apps and genuinely productive ones, my app concept fills this gap by making the pet's happiness directly tied to actual goal completion rather than separate game mechanics.</p>
-      
-      <button class="research-details-button">VIEW FULL RESEARCH</button>
+
+      <button class="petchi-research-button">VIEW FULL RESEARCH</button>
 
       <div class="user-testing-section">
       <h2>USER TESTING</h2>

@@ -42,8 +42,11 @@ loadProject: function(projectKey) {
     const interviewDetailsButton = document.querySelector('.interview-details-button');
     if (interviewDetailsButton) {
       interviewDetailsButton.addEventListener('click', () => {
-        const interviewDetailsWindow = document.querySelector('.interview-details-window');
-        WindowManager.openWindow(interviewDetailsWindow, true);
+        const content = interviewDetailsButton.nextElementSibling;
+        const isOpen = content.style.display === 'block';
+        content.style.display = isOpen ? 'none' : 'block';
+        interviewDetailsButton.classList.toggle('open', !isOpen);
+        interviewDetailsButton.textContent = isOpen ? 'VIEW FULL INTERVIEW ↓' : 'COLLAPSE ↑';
       });
     }
 
@@ -51,8 +54,11 @@ loadProject: function(projectKey) {
     const contentStrategyButton = document.querySelector('.content-strategy-button');
     if (contentStrategyButton) {
       contentStrategyButton.addEventListener('click', () => {
-        const contentStrategyWindow = document.querySelector('.content-strategy-window');
-        WindowManager.openWindow(contentStrategyWindow, true);
+        const content = contentStrategyButton.nextElementSibling;
+        const isOpen = content.style.display === 'block';
+        content.style.display = isOpen ? 'none' : 'block';
+        contentStrategyButton.classList.toggle('open', !isOpen);
+        contentStrategyButton.textContent = isOpen ? 'VIEW FULL STRATEGY ↓' : 'COLLAPSE ↑';
       });
     }
 
@@ -60,8 +66,11 @@ loadProject: function(projectKey) {
     const logoIterationsButton = document.querySelector('.logo-iterations-button');
     if (logoIterationsButton) {
       logoIterationsButton.addEventListener('click', () => {
-        const logoIterationsWindow = document.querySelector('.logo-iterations-window');
-        WindowManager.openWindow(logoIterationsWindow, true);
+        const content = logoIterationsButton.nextElementSibling;
+        const isOpen = content.style.display === 'block';
+        content.style.display = isOpen ? 'none' : 'block';
+        logoIterationsButton.classList.toggle('open', !isOpen);
+        logoIterationsButton.textContent = isOpen ? 'VIEW DESIGN PROCESS ↓' : 'COLLAPSE ↑';
       });
     }
 
@@ -69,25 +78,31 @@ loadProject: function(projectKey) {
     const researchDetailsButton = document.querySelector('.research-details-button');
     if (researchDetailsButton) {
       researchDetailsButton.addEventListener('click', () => {
-        const researchDetailsWindow = document.querySelector('.research-details-window');
-        WindowManager.openWindow(researchDetailsWindow, true);
+        const content = researchDetailsButton.nextElementSibling;
+        const isOpen = content.style.display === 'block';
+        content.style.display = isOpen ? 'none' : 'block';
+        researchDetailsButton.classList.toggle('open', !isOpen);
+        researchDetailsButton.textContent = isOpen ? 'VIEW FULL RESEARCH ↓' : 'COLLAPSE ↑';
       });
     }
 
     // Field research button (for Petchi project)
-   const fieldResearchButton = document.querySelector('.research-details-button');
-   if (fieldResearchButton) {
-    fieldResearchButton.addEventListener('click', () => {
-    window.open('pdfs/field-research-petchi.pdf', '_blank');
-    });
-}
+    const fieldResearchButton = document.querySelector('.petchi-research-button');
+    if (fieldResearchButton) {
+      fieldResearchButton.addEventListener('click', () => {
+        window.open('pdfs/field-research-petchi.pdf', '_blank');
+      });
+    }
 
     // Wireframe details button (for UX project)
     const wireframeDetailsButton = document.querySelector('.wireframe-details-button');
     if (wireframeDetailsButton) {
+      const content = wireframeDetailsButton.nextElementSibling;
       wireframeDetailsButton.addEventListener('click', () => {
-        const wireframeDetailsWindow = document.querySelector('.wireframe-details-window');
-        WindowManager.openWindow(wireframeDetailsWindow, true);
+        const isOpen = content.style.display === 'block';
+        content.style.display = isOpen ? 'none' : 'block';
+        wireframeDetailsButton.classList.toggle('open', !isOpen);
+        wireframeDetailsButton.textContent = isOpen ? 'VIEW WIREFRAME PROCESS ↓' : 'COLLAPSE ↑';
       });
     }
     
