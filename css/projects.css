@@ -1660,6 +1660,8 @@
 
 /* h2 accent underline */
 .detail-content h2 {
+  font-family: 'PixelOperatorBold', monospace !important;
+  font-size: 30px !important;
   padding-bottom: 10px !important;
   border-bottom: 2px solid #849E6B !important;
   margin-bottom: 28px !important;
@@ -1668,9 +1670,10 @@
 
 /* h3 spaced uppercase */
 .detail-content h3 {
+  font-family: 'PixelOperatorBold', monospace !important;
   letter-spacing: 2px !important;
   text-transform: uppercase !important;
-  font-size: 13px !important;
+  font-size: 22px !important;
   margin-top: 36px !important;
   margin-bottom: 14px !important;
   color: #555 !important;
@@ -1733,7 +1736,7 @@
 
 .detail-stat-label {
   font-family: 'PixelOperatorBold', monospace;
-  font-size: 12px;
+  font-size: 18px;
   color: #444;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1786,9 +1789,32 @@
   font-size: 13px !important;
 }
 
+/* Side-by-side text + stat column layout */
+.detail-side-layout {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.detail-side-text {
+  flex: 1;
+}
+
+.detail-stat-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  flex-shrink: 0;
+  padding-left: 40px;
+  border-left: 1px solid #d0cfc9;
+  min-width: 160px;
+}
+
 /* Mobile creative components */
 @media (max-width: 768px) {
   .detail-stat-row { gap: 28px; }
   .detail-stat-number { font-size: 38px; }
   .detail-pull-quote { padding: 14px 18px; }
+  .detail-side-layout { flex-direction: column; }
+  .detail-stat-col { border-left: none; border-top: 1px solid #d0cfc9; padding-left: 0; padding-top: 24px; flex-direction: row; flex-wrap: wrap; gap: 20px; }
 }

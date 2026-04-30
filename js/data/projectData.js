@@ -546,22 +546,18 @@ const projectData = {
 
       <div class="logo-section">
         <h2>USER TEST FEEDBACK</h2>
-        <div class="logo-container">
-          <div class="logo-text">
+        <div class="detail-side-layout">
+          <div class="detail-side-text">
             <p>I tested my "Blurred" game with 4 college students to see if it really shows what it's like to have blurry vision. I watched them play through all 6 scenarios and asked them questions after.</p>
-            
             <p>The results were really good! Everyone finished the game and said it felt realistic (average score 8.8/10). The transport scene with the buses was the hardest for everyone. People got frustrated at first but understood better by the end how hard daily tasks can be with vision problems.</p>
-
-            <div class="detail-stat-row">
-              <div><div class="detail-stat-number">4</div><div class="detail-stat-label">Testers</div></div>
-              <div><div class="detail-stat-number">8.8</div><div class="detail-stat-label">Avg. realism score / 10</div></div>
-              <div><div class="detail-stat-number">6</div><div class="detail-stat-label">Scenarios completed</div></div>
-              <div><div class="detail-stat-number">100%</div><div class="detail-stat-label">Completion rate</div></div>
-            </div>
-
             <p>All users started clicking randomly but learned to be more careful as they played. The game took about 1-2 minutes to complete, and everyone said the difficulty was just right, challenging but not impossible.</p>
-
             <button class="user-test-button">VIEW FULL USER TEST</button>
+          </div>
+          <div class="detail-stat-col">
+            <div><div class="detail-stat-number">4</div><div class="detail-stat-label">Testers</div></div>
+            <div><div class="detail-stat-number">8.8</div><div class="detail-stat-label">Avg. realism score / 10</div></div>
+            <div><div class="detail-stat-number">6</div><div class="detail-stat-label">Scenarios completed</div></div>
+            <div><div class="detail-stat-number">100%</div><div class="detail-stat-label">Completion rate</div></div>
           </div>
         </div>
       </div>
