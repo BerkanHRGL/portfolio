@@ -10,14 +10,14 @@ const projectData = {
       
       <div class="project-info-row">
         <div class="tools-section">
-          <h2>TOOLS USED</h2>
-          <ul>
-            <li>Figma</li>
-            <li>Adobe Illustrator</li>
-            <li>Adobe Photoshop</li>
-          </ul>
+          <div class="detail-section-label">TOOLS USED</div>
+          <div class="detail-tags">
+            <span class="detail-tag">Figma</span>
+            <span class="detail-tag">Adobe Illustrator</span>
+            <span class="detail-tag">Adobe Photoshop</span>
+          </div>
         </div>
-        
+
         <div class="date-section">
           <h3>DATE</h3>
           <p>February 2025 - March 2025</p>
@@ -27,6 +27,10 @@ const projectData = {
       <div class="research-section">
         <h2>RESEARCH PROCESS</h2>
         <p>I started by studying the techno music scene and Boris Schmidt's music style. I looked at what other techno artists were doing and created mood boards to gather ideas. I interviewed Boris to learn what he wanted for his brand, and also talked to a techno music fan to understand what the audience likes. Using what I learned from these interviews and creating a user persona, I designed visuals that truly represent Boris as an artist. My goal was to create a brand that both Boris and his fans would connect with.</p>
+
+        <div class="detail-pull-quote">
+          <p>"Techno fans want more than just hard beats — they want atmosphere, emotion, and beautiful visuals. This insight shaped every design decision for Boris Schmidt's brand."</p>
+        </div>
         
         <h3>INTERVIEW</h3>
         <p>I interviewed Sophie, a 20-year-old techno fan, to better understand the target audience. She listens to melodic and minimal techno, especially artists like Tale of Us and Mind Against. Sophie uses techno music to relax and create a certain mood. She prefers festivals with a relaxed atmosphere and pays attention to album covers when choosing music.</p>
@@ -83,7 +87,13 @@ const projectData = {
             <p>The results showed that Version 2 was preferred because it felt more mysterious and creative. People said Version 1 looked too direct and normal, while Version 2 created intrigue with its abstract design and hidden elements. This confirmed that the mysterious approach I chose for Boris Schmidt's brand appeals more to the target audience than straightforward designs.</p>
           </div>
         </div>
-        
+
+        <div class="detail-stat-row">
+          <div><div class="detail-stat-number">12</div><div class="detail-stat-label">Survey Participants</div></div>
+          <div><div class="detail-stat-number">2</div><div class="detail-stat-label">Poster Designs Tested</div></div>
+          <div><div class="detail-stat-number">75%</div><div class="detail-stat-label">Preferred Version 2</div></div>
+        </div>
+
         <h3>CONTENT STRATEGY</h3>
         <p>I created this content strategy because it's important to present the brand in a consistent way. With a clear strategy, I know what tone, style, and type of content we should use to reach the right target audience. It helps me convey the message effectively and increase brand visibility.</p>
         <button class="content-strategy-button accordion-toggle">VIEW FULL STRATEGY ↓</button>
@@ -277,14 +287,14 @@ const projectData = {
       
       <div class="project-info-row">
         <div class="tools-section">
-          <h2>TOOLS USED</h2>
-          <ul>
-            <li>Figma</li>
-            <li>Adobe Illustrator</li>
-            <li>Adobe Photoshop</li>
-            <li>WCAG 2.2 Guidelines</li>
-            <li>ChatGPT for research</li>
-          </ul>
+          <div class="detail-section-label">TOOLS USED</div>
+          <div class="detail-tags">
+            <span class="detail-tag">Figma</span>
+            <span class="detail-tag">Adobe Illustrator</span>
+            <span class="detail-tag">Adobe Photoshop</span>
+            <span class="detail-tag">WCAG 2.2</span>
+            <span class="detail-tag">ChatGPT</span>
+          </div>
         </div>
         
         <div class="date-section">
@@ -320,7 +330,17 @@ const projectData = {
         <p>I conducted comprehensive research to understand the current state of digital accessibility and the specific challenges faced by visually impaired users. The research focused on three key areas: competitive analysis of existing accessibility solutions, understanding visual impairments and their impact on web usage, and identifying the target audience within government institutions.</p>
         
         <p>Through literature research and case study analysis, I discovered that many websites still fail to meet basic accessibility standards. For example, only 23% of Dutch municipal websites comply with established accessibility guidelines, highlighting the urgent need for better accessibility solutions.</p>
-                
+
+        <div class="detail-stat-row">
+          <div><div class="detail-stat-number">23%</div><div class="detail-stat-label">Municipal websites meeting standards</div></div>
+          <div><div class="detail-stat-number">355</div><div class="detail-stat-label">Websites evaluated</div></div>
+          <div><div class="detail-stat-number">73</div><div class="detail-stat-label">Public hospitals audited</div></div>
+        </div>
+
+        <div class="detail-pull-quote">
+          <p>"Only 23% of government websites meet basic accessibility standards — highlighting the urgent gap between legal requirements and actual implementation."</p>
+        </div>
+
         <button class="research-details-button accordion-toggle">VIEW FULL RESEARCH ↓</button>
         <div class="accordion-content">
           <h3>FIELD RESEARCH — COMPETITIVE ANALYSIS</h3>
@@ -452,18 +472,18 @@ const projectData = {
       
       <div class="project-info-row">
         <div class="tools-section">
-          <h2>TOOLS USED</h2>
-          <ul>
-            <li>Visual Studio Code</li>
-            <li>GitHub Copilot</li>
-            <li>Figma</li>
-            <li>Adobe Photoshop</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-          </ul>
+          <div class="detail-section-label">TOOLS USED</div>
+          <div class="detail-tags">
+            <span class="detail-tag">VS Code</span>
+            <span class="detail-tag">GitHub Copilot</span>
+            <span class="detail-tag">Figma</span>
+            <span class="detail-tag">Adobe Photoshop</span>
+            <span class="detail-tag">HTML</span>
+            <span class="detail-tag">CSS</span>
+            <span class="detail-tag">JavaScript</span>
+          </div>
         </div>
-        
+
         <div class="date-section">
           <h3>DATE</h3>
           <p>April 2025 - May 2025</p>
@@ -531,9 +551,16 @@ const projectData = {
             <p>I tested my "Blurred" game with 4 college students to see if it really shows what it's like to have blurry vision. I watched them play through all 6 scenarios and asked them questions after.</p>
             
             <p>The results were really good! Everyone finished the game and said it felt realistic (average score 8.8/10). The transport scene with the buses was the hardest for everyone. People got frustrated at first but understood better by the end how hard daily tasks can be with vision problems.</p>
-            
+
+            <div class="detail-stat-row">
+              <div><div class="detail-stat-number">4</div><div class="detail-stat-label">Testers</div></div>
+              <div><div class="detail-stat-number">8.8</div><div class="detail-stat-label">Avg. realism score / 10</div></div>
+              <div><div class="detail-stat-number">6</div><div class="detail-stat-label">Scenarios completed</div></div>
+              <div><div class="detail-stat-number">100%</div><div class="detail-stat-label">Completion rate</div></div>
+            </div>
+
             <p>All users started clicking randomly but learned to be more careful as they played. The game took about 1-2 minutes to complete, and everyone said the difficulty was just right, challenging but not impossible.</p>
-            
+
             <button class="user-test-button">VIEW FULL USER TEST</button>
           </div>
         </div>
@@ -596,18 +623,18 @@ const projectData = {
     <p>This portfolio website development project involved creating a personal digital showcase to present my work as a student. The project demonstrates my skills in front-end development, UX/UI design, and creative coding while providing an interactive platform to display my projects and achievements.</p>    
     <div class="project-info-row">
       <div class="tools-section">
-        <h2>TOOLS USED</h2>
-        <ul>
-          <li>Visual Studio Code</li>
-          <li>GitHub Copilot</li>
-          <li>Figma</li>
-          <li>Adobe Photoshop</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Javascript</li>
-        </ul>
+        <div class="detail-section-label">TOOLS USED</div>
+        <div class="detail-tags">
+          <span class="detail-tag">VS Code</span>
+          <span class="detail-tag">GitHub Copilot</span>
+          <span class="detail-tag">Figma</span>
+          <span class="detail-tag">Adobe Photoshop</span>
+          <span class="detail-tag">HTML</span>
+          <span class="detail-tag">CSS</span>
+          <span class="detail-tag">JavaScript</span>
+        </div>
       </div>
-      
+
       <div class="date-section">
         <h3>DATE</h3>
         <p>February 2025 - June 2025</p>
@@ -646,7 +673,13 @@ const projectData = {
     <p>But here's what didn't work so well: people weren't sure exactly what kind of design work I do. Some wondered if I focus on websites, visual design, or something else. A few also mentioned they weren't sure where to click or what they were supposed to do on the site.</p>
     
     <p>So the takeaway is pretty clear, my portfolio grabs attention with its style, but I need to make it clearer what I actually do and guide visitors better on how to navigate the site.</p>
-    
+
+    <div class="detail-stat-row">
+      <div><div class="detail-stat-number">3</div><div class="detail-stat-label">Test participants</div></div>
+      <div><div class="detail-stat-number">3/3</div><div class="detail-stat-label">Recalled retro style</div></div>
+      <div><div class="detail-stat-number">1</div><div class="detail-stat-label">Key area to improve</div></div>
+    </div>
+
     <button class="five-second-test-button">VIEW FULL 5-SECOND TEST</button>
   </div>
 </div>
@@ -664,7 +697,13 @@ const projectData = {
     <p>One person did prefer version A though, saying the text buttons were clearer and less overwhelming. They found the icons a bit too big and sometimes confusing.</p>
     
     <p>In the end, most people liked the retro icons better because they made the site more visually appealing and the navigation was clearer. So I decided to go with version B for my final design.</p>
-    
+
+    <div class="detail-stat-row">
+      <div><div class="detail-stat-number">3</div><div class="detail-stat-label">Participants</div></div>
+      <div><div class="detail-stat-number">2/3</div><div class="detail-stat-label">Preferred retro icons</div></div>
+      <div><div class="detail-stat-number">B</div><div class="detail-stat-label">Winning version</div></div>
+    </div>
+
     <button class="ab-test-button">VIEW FULL A/B TEST</button>
   </div>
 </div>
@@ -751,18 +790,22 @@ const projectData = {
   content: `
     <h2>PROJECT OVERVIEW</h2>
     <p>Petchi is a goal-tracking web app I developed that combines productivity with emotional connection through a virtual pet. The concept is simple but powerful, the better you complete your daily goals, the happier your pet becomes. This approach makes task management more engaging and personally meaningful.</p>
+
+    <div class="detail-pull-quote">
+      <p>"The better you complete your daily goals, the happier your pet becomes — bridging the gap between emotional engagement and real productivity."</p>
+    </div>
     
     <div class="project-info-row">
       <div class="tools-section">
-        <h2>TOOLS USED</h2>
-        <ul>
-          <li>Visual Studio Code</li>
-          <li>Figma</li>
-          <li>Adobe Illustrator</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
+        <div class="detail-section-label">TOOLS USED</div>
+        <div class="detail-tags">
+          <span class="detail-tag">VS Code</span>
+          <span class="detail-tag">Figma</span>
+          <span class="detail-tag">Adobe Illustrator</span>
+          <span class="detail-tag">HTML</span>
+          <span class="detail-tag">CSS</span>
+          <span class="detail-tag">JavaScript</span>
+        </div>
       </div>
       
       <div class="date-section">
@@ -783,6 +826,11 @@ const projectData = {
       <p>This research revealed an opportunity to create a simple goal-tracking app that combines emotional connection through a virtual pet with practical productivity features, where the pet's mood directly reflects real task completion.</p>
       
       <p>There's a gap between emotionally engaging apps and genuinely productive ones, my app concept fills this gap by making the pet's happiness directly tied to actual goal completion rather than separate game mechanics.</p>
+
+      <div class="detail-stat-row">
+        <div><div class="detail-stat-number">4</div><div class="detail-stat-label">Apps analyzed</div></div>
+        <div><div class="detail-stat-number">2</div><div class="detail-stat-label">Key market gaps found</div></div>
+      </div>
 
       <button class="petchi-research-button">VIEW FULL RESEARCH</button>
 

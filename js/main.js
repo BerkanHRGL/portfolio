@@ -961,7 +961,7 @@ function setupProjectsShowcase() {
   if (backBtn) {
     backBtn.addEventListener('click', () => {
       showcase.style.display = 'none';
-      document.getElementById('datetime-display').style.display = 'flex';
+      document.getElementById('datetime-display').style.display = '';
     });
   }
 }
