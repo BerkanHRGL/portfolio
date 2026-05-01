@@ -1117,12 +1117,14 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: block;
+  will-change: opacity, transform;
 }
 
 #showcase-preview-img.fading {
   opacity: 0;
+  transform: scale(1.04);
 }
 
 /* Right column — scrollable project cards */
@@ -1152,6 +1154,15 @@
   width: 100%;
   border: 2px solid #D9D9D9;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.showcase-card.in-view .card-inner {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card-titlebar {
@@ -1314,7 +1325,7 @@
   border-right: 2px solid #333;
   color: #000;
   font-family: 'PixelOperatorBold', monospace;
-  font-size: 12px;
+  font-size: 16px;
   padding: 0 20px;
   height: 100%;
   cursor: pointer;
@@ -1342,7 +1353,7 @@
   border-right: 1px solid #333;
   color: #777;
   font-family: 'PixelOperatorBold', monospace;
-  font-size: 11px;
+  font-size: 16px;
   padding: 0 18px;
   height: 100%;
   cursor: pointer;
